@@ -1,0 +1,192 @@
+[
+	{
+		"title":"Basic Office Swift (Kaduna)",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"MIS",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"A+",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"N+",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"S+",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Web Design",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Hardware and Networking",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Web Development",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"JAVA",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"CCNA",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"MCSE/MCITP",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Oracle",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Mobile App Development",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Graphics",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Multimedia",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Animation",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Basic and Advanced Excel",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"E-Commerce Skills",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"RDMS",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"JAVA Basic",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"JAVA Advance",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Oracle 1 (Linux/SQL/OCA)",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Oracle 2 (OCP)",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Inter Networking Tech Basic (Cisco 1)",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Inter Networking Technologies Advanced (Cisco 2)",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Introduction to IBM SPSS Statistics",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Project Management Practice (PMBOK 5)",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Fundamentals of Networking",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Information Systems Audit",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Data Management and Manipulation with IBM SPSS",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Effective Project Management with MS Project 2013",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Fundamentals of Network Security",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Interconnecting Cisco Networking Devices, Part 1 (ICND1) 3.0",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Oracle Database 12c: Admin, Install and Upgrade",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Introduction to Statistical Analysis Using IBM SPSS",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Inter Cisco Networking Devices, Part 2 (ICND2) 3.0",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"IT Infrastructure Library (ITIL) Foundation",
+		"description":"",
+		"icon":"fa fa-book"
+	},
+	{
+		"title":"Oracle Database 12c: Backup and Recovery Workshop",
+		"description":"",
+		"icon":"fa fa-book"
+	}
+]
