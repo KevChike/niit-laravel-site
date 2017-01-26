@@ -6,7 +6,7 @@
 angular.module('app')
     .controller('AppCtrl', ['$scope', '$rootScope', '$state', '$http', function($scope, $rootScope, $state, $http) {
 
-        $scope.BUILD = "abuja"; //"kaduna"
+        $scope.BUILD = "abuja"
 
         // App globals
         $scope.app = {
@@ -34,10 +34,10 @@ angular.module('app')
             $scope.app.name = "NIIT Abuja";
             $scope.logo = "assets/img/logo-abuja.png";
 
-            $scope.app.facebook = "https://facebook.com/niitabuja";
-            $scope.app.facebook_name = "/niitabuja";
-            $scope.app.linkedin = "https://linkedin.com/niitabuja";
-            $scope.app.linkedin_name = "/niitabuja";
+            $scope.app.facebook = "https://www.facebook.com/NIIT-ABUJA-1765588413728305/";
+            $scope.app.facebook_name = "/NIIT-ABUJA-1765588413728305";
+            $scope.app.linkedin = "https://www.linkedin.com/groups/8581144";
+            $scope.app.linkedin_name = "/groups/8581144";
             $scope.app.twitter = "https://twitter.com/niitabuja";
             $scope.app.twitter_name = "@niitabuja";
 
