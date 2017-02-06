@@ -1,2 +1,44 @@
 [
+	{
+		"title": "ICT EXPO 2017",
+        "class": "bg-success-lighter",
+        "start": "2017-02-09T09:00:00",
+        "end": "2017-02-09T15:00:00",
+        "other": {
+            "code": 1,
+            "message": "Announcing A 3-Day Free Workshop on ICT",
+            "location": "Ek House, 5D Kanta Road, Kaduna, Nigeria.",
+            "img": {
+                "src": "assets/img/news/workshop-kaduna.jpg"
+            }
+        }
+	},
+	{
+		"title": "ICT EXPO 2017",
+        "class": "bg-success-lighter",
+        "start": "2017-02-10T09:00:00",
+        "end": "2017-02-10T15:00:00",
+        "other": {
+            "code": 2,
+            "message": "Announcing A 3-Day Free Workshop on ICT",
+            "location": "Ek House, 5D Kanta Road, Kaduna, Nigeria.",
+            "img": {
+                "src": "assets/img/news/workshop-kaduna.jpg"
+            }
+        }
+	},
+	{
+		"title": "ICT EXPO 2017",
+        "class": "bg-success-lighter",
+        "start": "2017-02-11T09:00:00",
+        "end": "2017-02-11T15:00:00",
+        "other": {
+            "code": 3,
+            "message": "Announcing A 3-Day Free Workshop on ICT",
+            "location": "Ek House, 5D Kanta Road, Kaduna, Nigeria.",
+            "img": {
+                "src": "assets/img/news/workshop-kaduna.jpg"
+            }
+        }
+	}
 ]
