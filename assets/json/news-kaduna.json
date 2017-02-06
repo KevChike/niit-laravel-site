@@ -1,7 +1,7 @@
 [
 	{
-		"image": "assets/img/news/niitabuja.png",
-        "message": "Apply to NIIT Abuja",
-        "links": [{ "text": "niitabuja.com", "url": "http://niitabuja.com"}]
+		"image": "assets/img/news/workshop.jpg",
+        "message": "ICT Expo 2017",
+        "links": [{ "text": "view poster", "url": "assets/img/news/workshop.jpg"}]
 	}
 ]
