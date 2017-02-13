@@ -1,6 +1,7 @@
 [
 	{
 		"image": "assets/img/news/niitabuja.png",
+        "largeImage": "assets/img/news/niitabuja.png",
         "message": "Apply to NIIT Abuja",
         "links": [{ "text": "niitabuja.com", "url": "http://niitabuja.com"}]
 	},

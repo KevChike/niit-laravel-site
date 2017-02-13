@@ -1,7 +1,8 @@
                     <!-- START ITEM -->
                     <div ng-repeat="item in news" class="card share share-other col1" data-social="item">
                         <div ng-if="item.image" class="card-content">
-                            <img src="{{item.image}}">
+                            <a ng-if="item.largeImage" href="{{item.largeImage}}" target="_blank"><img src="{{item.image}}"></a>
+                            <a ng-if="!item.largeImage" href="{{item.image}}" target="_blank"><img src="{{item.image}}"></a>
                         </div>
                         <div class="card-description">
                             <p>{{item.message}}</p>

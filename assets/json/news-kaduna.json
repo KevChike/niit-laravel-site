@@ -1,6 +1,7 @@
 [
 	{
 		"image": "assets/img/news/workshop-kaduna.jpg",
+		"largeImage": "assets/img/news/workshop-kaduna.jpg",
         "message": "ICT Expo 2017",
         "links": [{ "text": "view poster", "url": "assets/img/news/workshop-kaduna.jpg"}]
 	}
