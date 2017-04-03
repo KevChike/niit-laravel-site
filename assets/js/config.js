@@ -18,36 +18,12 @@ angular.module('app')
                 })
             .state('app.home', {
                 url: '/home',
-                templateUrl: 'tpl/apps/social/social.html',
-                resolve: {
-                    deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                        return $ocLazyLoad.load([
-                                'isotope',
-                                'stepsForm'
-                            ], {
-                                insertBefore: '#lazyload_placeholder'
-                            })
-                            .then(function() {
-                                return $ocLazyLoad.load([
-                                    'pages/js/pages.social.min.js',
-                                    'assets/js/apps/social/social.js'
-                                ])
-                            });
-                    }]
-                }
+                templateUrl: 'tpl/home.html'
             })
 
             .state('app.courses', {
                 url: '/courses',
-                templateUrl: 'tpl/courses.html',
-                controller: 'CoursesCtrl',
-                resolve: {
-                    deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                        return $ocLazyLoad.load([
-                            'assets/js/controllers/courses.js'
-                        ]);
-                    }]
-                }
+                templateUrl: 'tpl/courses.html'
             })
 
             .state('app.calendar', {

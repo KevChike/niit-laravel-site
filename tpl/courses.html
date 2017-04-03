@@ -2,6 +2,7 @@
 <div class="container-fluid container-fixed-lg">
     <div class="panel panel-transparent">
         <div class="panel-body sortable">
+            <br /><br /><br />
             <div class="row">
                 <div class="col-md-6 sortable-column" ui-jq="sortable" ui-options='{connectWith: ".sortable .row .col-md-6",
         handle: ".panel-heading",
@@ -31,6 +32,7 @@
                             <p class="">
                                 {{course.description}}
                             </p>
+                            <a ng-if="course.more" href="{{course.more}}" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>
                         </div>
                     </div>
                 </div>

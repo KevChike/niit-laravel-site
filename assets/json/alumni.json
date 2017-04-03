@@ -1,0 +1,9 @@
+[
+	{
+        "avatar": "assets/img/temp/abdul-avatar.png",
+		"bio": "Abdul helps NIIT train future world-class developers.",
+        "message": "Hi, my name is Abdul B. I just finished my program with NIIT Kaduna. I want to encourage you to come to NIIT.",
+        "website": "http://abdul.com",
+        "slides": [ "assets/img/temp/abdul-slide1.jpg", "assets/img/temp/abdul-slide2.jpg", "assets/img/temp/abdul-slide3.jpg" ]
+	}
+]

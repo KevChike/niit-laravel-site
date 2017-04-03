@@ -1,192 +1,87 @@
 [
 	{
-		"title":"Basic Office Swift (Kaduna)",
-		"description":"",
+		"title":"Diploma in Infrastructure: Windows Server Administration",
+		"description":"Aims to teach knowledge of deploying, building, designing, optimizing, and operation technologies for Server Administrator.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"MIS",
-		"description":"",
+		"title":"Diploma in Java/.NET Technologies",
+		"description":"Aims to teach programming and thereafter, design and develop web based applications on cutting edge Java/.NET technology.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"A+",
-		"description":"",
+		"title":"Diploma in Web Development: PHP & MySQL",
+		"description":"Skills in creating a web based dynamic application using PHP and MySQL",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"N+",
-		"description":"",
+		"title":"Program in Linux & Oracle Data Base Administration: Oracle Database Administrator 12C/11G",
+		"description":"Enables the learner with the knowledge of planning, installing configuring, managing, querying and troubleshooting an Oracle datable.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"S+",
-		"description":"",
+		"title":"Program in Hardware and Networking: Desktop Support Technician",
+		"description":"Course on how to install, upgrade, repair, configure, optimize, troubleshoot, and perform preventive maintenance on basic PC hardware and OS. Also, will help identifying and describing all the major networking technologies, system, skills and tools used in modern PC-based computer networks.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Web Design",
-		"description":"",
+		"title":"Certified Network Administrator: Network Security Engineer (CISCO Technology)",
+		"description":"Comprehensive program from CISCO, addressing the need of the Infrastructure management services with a range of network services, network devices, managing networks, troubleshooting networks to provide practical and experimental leading experience to the students Cisco modules will enable students to acquire CCNA certifications.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Hardware and Networking",
-		"description":"",
+		"title":"Program in MIS Skills: MIS Executive",
+		"description":"Enables the learner with the complete hands-on skills for the Management Information System(MIS) function within the organization and how it needs to be projected to the senior management.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Web Development",
-		"description":"",
+		"title":"Program in Web Design: Web Designing",
+		"description":"Aims to teach-how to design and create websites and host them.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"JAVA",
-		"description":"",
+		"title":"Program on Mobile App : Android App",
+		"description":"Program focuses on application level APIs and imparts skills to develop user and data-centric mobile apps and utilities on the Android platform. Skill in android app development incl. working with graphics, multimedia, connectivity and location-based services. Learn to debug, deploy and test mobile applications.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"CCNA",
-		"description":"",
+		"title":"Installing, Configuring, Managing and Troubleshooting a PC(A+): Desktop Support",
+		"description":"Installing, configuring, managing, and troubleshooting a PC focuses on computer systems and the components. Teaches how to install, maintain, and configure the Windows OS and different computer components and peripherals. Also, enable students to set up computer networks and mitigate computer security threats. The course also educates students on how to carry out troubleshooting, preventive maintenance, and other safety procedures",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"MCSE/MCITP",
-		"description":"",
+		"title":"Protocol and Internetworking Standards(N+)",
+		"description":"Course equips students with knowledge of networking concepts and the skills required to setup, manage, troubleshoot, and secure networks.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Oracle",
-		"description":"",
+		"title":"Basic Microsoft Office(Swift) Software Testing Using Visual Studio",
+		"description":"Aims to give skills in the use of Microsoft Office Software applications need to be updated regularly to keep pace with changing business and user needs. Visual Studio provides tools to design, develop, debug and deploy applications. With Visual Studio, you can also create several types of automated tests. In addition, Visual Studio helps track work items and test cases during the application Lifecycle Management(ALM)process.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Mobile App Development",
-		"description":"",
+		"title":"Certificate in Project Management Practice",
+		"description":"For the persons who wish to develop professionally, increase their project management skills, apply, apply a formalized and standards-based approach to project management, seek career advancement by moving into a formal project manager job roles, as well as apply for Project Management Professional(PMP)Certification.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Graphics",
-		"description":"",
+		"title":"CompTIA Security+",
+		"description":"Will assist you if your job responsibilities include security network services, network devices, and network traffic. Course will prepare for the CompTIA Security+ certification examination (exam number SYO-401). Build on your knowledge and professional experience with computer hardware, OS, and networks to implement basic security services on network.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Multimedia",
-		"description":"",
+		"title":"Certificate in information Systems Audit(CISA).",
+		"description":"CISA is world-renowned as the standard of achievement for those who audit, control, monitor, and assess an organization’s IT and business systems. Created for professionals with work experience in IT auditing, control or security in various systems.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Animation",
-		"description":"",
+		"title":"MMS-Software Engineering",
+		"description":"This program builds a strong foundation in IT, software engineering principles. Enterprise development frameworks, project management and much more. This course focuses on development in .NET and Java Technologies.",
 		"icon":"fa fa-book"
 	},
 	{
-		"title":"Basic and Advanced Excel",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"E-Commerce Skills",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"RDMS",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"JAVA Basic",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"JAVA Advance",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Oracle 1 (Linux/SQL/OCA)",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Oracle 2 (OCP)",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Inter Networking Tech Basic (Cisco 1)",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Inter Networking Technologies Advanced (Cisco 2)",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Introduction to IBM SPSS Statistics",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Project Management Practice (PMBOK 5)",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Fundamentals of Networking",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Information Systems Audit",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Data Management and Manipulation with IBM SPSS",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Effective Project Management with MS Project 2013",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Fundamentals of Network Security",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Interconnecting Cisco Networking Devices, Part 1 (ICND1) 3.0",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Oracle Database 12c: Admin, Install and Upgrade",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Introduction to Statistical Analysis Using IBM SPSS",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Inter Cisco Networking Devices, Part 2 (ICND2) 3.0",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"IT Infrastructure Library (ITIL) Foundation",
-		"description":"",
-		"icon":"fa fa-book"
-	},
-	{
-		"title":"Oracle Database 12c: Backup and Recovery Workshop",
-		"description":"",
+		"title":"MMS-Infrastructure Management",
+		"description":"This program builds a strong networking fundamentals, enterprise network solutions management concepts and security solutions management and much more. NIIT provides an opportunity to pursue specialization in Linux or Microsoft platform.",
 		"icon":"fa fa-book"
 	}
 ]
