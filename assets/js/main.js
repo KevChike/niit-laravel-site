@@ -44,6 +44,7 @@ angular.module('app')
             $scope.app.twitter = "https://twitter.com/niitabuja";
             $scope.app.twitter_name = "@niitabuja";
 
+            $scope.email = "info@niitabuja.com";
             $scope.phone = "+234-905-509-6016 · +234-905-509-6019";
 
             alumniUrl = "assets/json/alumni-abuja.json";
@@ -65,6 +66,7 @@ angular.module('app')
             $scope.app.twitter = "https://twitter.com/niitkaduna";
             $scope.app.twitter_name = "@niitkaduna";
 
+            $scope.email = "info@niitkaduna.com";
             $scope.phone = "+234-807-509-0381 · +234-807-509-0382 · +234-807-509-0383 · +234-807-509-0384";
 
             alumniUrl = "assets/json/alumni-kaduna.json";
@@ -147,7 +149,6 @@ angular.module('app')
             console.log("error", error);
         });
 
-        $scope.email = "info@campustechng.com";
         $scope.year = new Date().getFullYear();
         // Checks if the given state is the current state
         $scope.is = function(name) {
