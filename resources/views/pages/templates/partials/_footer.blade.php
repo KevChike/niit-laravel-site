@@ -5,12 +5,12 @@
 				<ul>
 					<li><a href="{{ url('/courses') }}">Courses</a></li>
 					<li><a href="{{ url('/events') }}">Events</a></li>
-					<li><a href="https://www.medium.com/niit-abuja">Blog</a></li>
+					<li><a href="{{ config('app.medium') }}">Blog</a></li>
 					<li><a href="{{ url('/about') }}">About</a></li>
 					<li><a href="{{ url('/contact') }}">Contact</a></li>
 				</ul>	
 			</div>
-			<div class="col-md-6 col-sm-6 col-xs-12 social_icon" >
+			<div class="col-md-6 col-sm-6 col-xs-12 footer_social_icon" >
 				<span>Follow us on: </span>
 				<a href="{{ config('app.facebook') }}" target="_blank" class="social_button_facebook"><i class="fa fa-facebook"></i></a> 
 				<a href="{{ config('app.twitter') }}" target="_blank" class="social_button_twitter"><i class="fa fa-twitter"></i></a> 

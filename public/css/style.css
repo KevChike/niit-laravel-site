@@ -64,14 +64,7 @@ body a:hover{
 }
 .header_2 {
     padding: 1.5em 0;
-    background:url(../img/header-img.jpg)no-repeat center bottom;
-    background-position: 0 -100px;
-    -webkit-background-size:cover; 
-    -moz-background-size:cover; 
-    -o-background-size:cover;
-    -ms-background-size:cover;  
-    background-size:cover;
-    background-attachment: fixed;
+    background-color: #8acdea;
 }
 .header nav.navbar.navbar-default {
     background: transparent;
@@ -672,9 +665,9 @@ body a:hover{
 }
 .card img {
     max-width: 100%;
-    /*height: auto;
+    height: auto;
     vertical-align: middle;
-    border: 0;*/
+    border: 0;
 }
 
 .card .card_details {
@@ -684,18 +677,24 @@ body a:hover{
 .card .card_title {
     font-size: 18px;
     color: #16222d;
-    display: block;
+    /*display: block;*/
     line-height: 1.2;
     font-weight: 400;
 }
 .card .card_subtitle {
     color: #8190a1;
-    display: block;
+    /*display: block;*/
     margin-top: 5px;
     font-size: 14px;
 }
 .card .card_footer {
-    display: flex;
+    /*display: flex;*/
+
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
 }
@@ -709,7 +708,13 @@ body a:hover{
     color: #8190a1;
 }
 .card_flex_display {
-    display: flex;
+    /*display: flex;*/
+    
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     flex-direction: column;
 }
 .card_flex {
@@ -1415,7 +1420,7 @@ body a:hover{
 
 }
 .about_banner .tint_layer {
-    background: rgba(31, 140, 223, 0.3);
+    background: rgba(31, 140, 223, 0.2);
     min-height: 300px;
 }
 .about_banner .section_title {
@@ -1476,9 +1481,6 @@ body a:hover{
     position: relative;
     color: #fff;
 }
-/*.alumni_section .section_title h2 {
-    
-}*/
 .alumni_section .section_title h2::before, .alumni_section .section_title h2::after {
     background-color: #fff;
 }
@@ -1533,6 +1535,9 @@ body a:hover{
     }
 }
 @media(max-width:991px){
+    .alumni_section {
+        background-attachment: scroll;
+    }
     .alumin_inner h5 {
         font-size: 18px;
     }
@@ -1658,16 +1663,20 @@ body a:hover{
     padding: 1em 0 1em;
 }
 .footer ul {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.footer li a {
-    color: #fff;
+.footer .footer_quick_link li {
     display: inline-block;
+    float: none;
     margin-right: 16px;
+}
+.footer .footer_quick_link li:last-child {
+    margin-right: 0;
+}
+.footer li a {   
     color: #fff;
     font-size:16px;
     font-weight: 400;
@@ -1686,22 +1695,22 @@ body a:hover{
 .footer .copyright {
     text-align: right;
 }
-.footer .social_icon {
+.footer .footer_social_icon {
     margin:0;
     text-align: right;
     padding-right: 19px;
+    display: inline-block;
 }
-.footer .social_icon a {
+.footer .footer_social_icon a {
     font-size: 1.3em;
     color: #fff;
-    display: inline-block;
     line-height: 1.3;
     margin: 0 0 0 1em;
 } 
-.footer .social_icon a:hover {
+.footer .footer_social_icon a:hover {
     color: #999;
 }
-.footer .social_icon span {
+.footer .footer_social_icon span {
     color: #fff;
     font-size: 16px;
 }
@@ -1710,16 +1719,19 @@ body a:hover{
         padding: 2em 0;
     }
     .footer ul {
-        display: inline-flex;
+        display: block;
     }
-    .footer li a {
+    .footer .footer_quick_link a, .footer .footer_social_icon a {
         font-size: 14px;
-        padding-bottom: 8px;
     }
-    .footer .footer_quick_link, .footer .social_icon, .footer p {
+    .footer .footer_quick_link, .footer .footer_social_icon, .footer p {
+        display: block;
         padding: 6px 0;
         text-align: center;
         line-height: 1.5;
+    }
+    .footer p {
+        margin: 0;
     }
 
 }

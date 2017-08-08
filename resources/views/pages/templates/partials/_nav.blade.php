@@ -18,14 +18,14 @@
 							<li><a href="{{ url('/about') }}" class="btn hover_effect">About</a></li>
 							<li><a href="{{ url('/contact') }}" class="btn hover_effect">Contact</a></li>
 						</ul> 
-						{{-- <div class="social_icon">
+						<div class="social_icon">
 							<a href="{{ config('app.facebook') }}" target="_blank" class="social_button_facebook"><i class="fa fa-facebook"></i></a> 
 							<a href="{{ config('app.twitter') }}" target="_blank" class="social_button_twitter"><i class="fa fa-twitter"></i></a> 
 							<a href="{{ config('app.medium') }}" target="_blank" class="social_button_medium"><i class="fa fa-medium"></i></a>  
-						</div> --}} 
-						<div class="social_icon" style="margin:0;">
+						</div> 
+						{{-- <div class="social_icon" style="margin:0;">
 							<a href="{{ url('/scholarship') }}" class="campaign">2017 Scholarship</a>
-						</div>
+						</div> --}}
 						<div class="clearfix"> </div>
 					</div>
 				</div>

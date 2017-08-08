@@ -17,7 +17,7 @@
 @endsection
 
 @section('content')
-	<section class="notify" title="Close notification">
+	{{-- <section class="notify" title="Close notification">
 		<div class="container-fluid">
 			<div class="row" >
             @if ( session()->has('message') )
@@ -130,13 +130,29 @@
 				<span class="pull-rights"><i class="fa fa-plus"></i></span>
 			</button>
 		</div>
+	</section> --}}
+
+	<section class="scholarship">
+		<div class="container">
+			<div style="min-height: 50px;">&nbsp;</div>
+			<div class="reg_form">
+				<h2 style="text-transform: none;">No avaliable scholarship</h2>
+				<div class="text-center" style="margin-top: 50px;">
+					<h4 style="font-weight: 700;margin-bottom: 10px;">Please, contact us for more info</h4>
+					<h4 style="margin-top:7px;"><i class="fa fa-map-marker"></i> {{ config('app.address') }}</h4>
+					<h4 style="margin-top:7px;"><i class="fa fa-phone"></i> {{ config('app.phone1') }}</h4>
+					<h4 style="margin-top:7px;"><i class="fa fa-phone"></i> {{ config('app.phone2') }}</h4>
+					<h4 style="margin-top:7px;"><i class="fa fa-envelope"></i> {{ config('app.email') }}</h4>
+				</div>
+			</div>
+		</div>
 	</section>
 
 @endsection
 
 @section('scripts')
 <script src="/plugins/owl-carousel/js/owl.carousel.js"></script>
-<script>
+{{-- <script>
 	$(document).ready(function() {
 		$("#owl-demo").owlCarousel({
 			items : 1,
@@ -147,8 +163,8 @@
 			pagination : true,
 		});
 	});
-</script>
-<script type="text/javascript">
+</script> --}}
+{{-- <script type="text/javascript">
 	$(document).ready(function() {
 		$('.note').show();
 		$('.notify').click(function() {
@@ -169,7 +185,8 @@
 			$('#apply_now').slideUp(200);
 		});
 	});
-</script>
+</script> --}}
+
 {{-- <script type="text/javascript">
 	$('.scroll_down a').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {

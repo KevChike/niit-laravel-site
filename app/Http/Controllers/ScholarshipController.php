@@ -10,12 +10,14 @@ class ScholarshipController extends Controller
 {
      public function index()
     {
+        // return view('errors.404');
         return view('pages.scholarship');
     }
 
     public function store(Request $request)
     {
-    	$scholarship = new Scholarship;
+        // return view('errors.404');
+        $scholarship = new Scholarship;
     	$scholarship->name = $request->name;
     	$scholarship->phone = $request->phone;
     	$scholarship->email = $request->email;

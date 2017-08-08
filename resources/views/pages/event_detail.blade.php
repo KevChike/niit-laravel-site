@@ -1,7 +1,7 @@
 @extends('pages.templates.master')
 
 @section('page_title')
-<title>{{ $event->event_description }} &#8211; {{ config('app.name') }}</title>
+<title>{{ $event->event_title }} &#8211; {{ config('app.name') }}</title>
 @endsection
 
 @section('page_description')

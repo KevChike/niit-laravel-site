@@ -29,10 +29,10 @@
 								<span class="card_title">
 									{{ $course->course_title }}
 								</span>
-								<span class="card_subtitle card_flex">
+								<span class="card_subtitle card_flex_display card_flex">
 									{{ $course->category }}
 								</span>
-								<span class="card_footer">
+								<span class="card_flex_display card_flex card_footer">
 									<i class="fa fa-clock-o footer_icon"></i><span class="duration card_flex"> {{ $course->duration }} </span>
 								</span>
 							</span>
