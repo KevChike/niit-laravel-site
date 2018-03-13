@@ -38,7 +38,7 @@
 				<div class="col-md-4 col-sm-4 right_content">
 					<div class="right_content_inner">
 						<div>
-							<img src="/img/course-img/{{ $course->slug }}.jpg" class="img-responsive" alt="{{ $course->course_title }}">
+							<img src="/assets/img/course-img/{{ $course->photo }}" class="img-responsive" alt="{{ $course->course_title }}">
 						</div>
 						<div class="course_feature">
 							<h4>Incentives</h4>
@@ -50,7 +50,7 @@
 							</ul>
 							<div class="course_feature_bottom">
 								<h3>Are you interested?</h3>
-								<a href="javascript:;">Yes, I am!</a>
+								<a href="{{ url('/contact') }}">Yes, I am!</a>
 							</div>
 						</div>
 					</div>

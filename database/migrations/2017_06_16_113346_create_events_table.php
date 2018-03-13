@@ -15,11 +15,18 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->text('event_title');
-            $table->text('event_description');
-            $table->timestamp('event_date')->default('0000-00-00 00:00:00');
+            $table->longText('event_description');
+            $table->string('uid')->unique();
+            $table->string('event_type');
+            $table->timestamp('event_start_date')->nullable();
+            $table->timestamp('event_end_date')->nullable();
+            $table->string('event_time')->nullable();
+            $table->timestamp('registration_start_date')->nullable();
+            $table->timestamp('registration_end_date')->nullable();
             $table->text('slug');
             $table->boolean('live')->default(0);
-            $table->timestamp('post_on')->default('0000-00-00 00:00:00');
+            $table->timestamp('posted_on')->nullable();
+            $table->string('niit_center');
             $table->timestamps();
         });
     }

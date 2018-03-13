@@ -22,29 +22,31 @@
 					<li class="event_card">
 						<div class="event_card_inner">
 							<div class="event_card_inner_left">
-								<a href="events/{{ $event->slug }}">
+								<a href="{{ url('/events/' . $event->slug) }}">
 									<div class="event_date">
 										<span class="calendar_top">
 											<i class="fa fa-circle pull-left"></i>
 											&nbsp;
 											<i class="fa fa-circle pull-right"></i>
 										</span>
-										<span class="event_day">{{ $event->event_date->format('j') }}</span>
-										<span class="event_month">{{ $event->event_date->format('M') }}</span>
-										<span class="event_year">{{ $event->event_date->format('Y') }}</span>
+										<span class="event_day">{{ $event->event_start_date->format('j') }}</span>
+										<span class="event_month">{{ $event->event_start_date->format('M') }}</span>
+										<span class="event_year">{{ $event->event_start_date->format('Y') }}</span>
 									</div>
 								</a> 
 							</div>
 							<div class="card_flex">
 								<div class="event_title">
-									<a href="events/{{ $event->slug }}">{{ $event->event_title }}</a>
+									<a href="{{ url('/events/' . $event->slug) }}">{{ $event->event_title }}</a>
 								</div>
 								<div class="event_content">
-									{!! $event->shortContent !!}
-									<a href="events/{{ $event->slug }}">Read more</a>
+									<p>
+										{!! $event->shortContent !!}
+										<a href="{{ url('/events/' . $event->slug) }}">Read more</a>
+									</p>
 								</div>
 								<div class="more_event_detail">
-									<a href="events/{{ $event->slug }}">View details <i class="icon-arrow-right "></i></a>
+									<a href="{{ url('/events/' . $event->slug) }}">View details <i class="icon-arrow-right "></i></a>
 								</div>
 							</div>
 						</div>

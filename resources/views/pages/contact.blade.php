@@ -26,38 +26,64 @@
 					<h3>Follow us on</h3>
 					<div class="social_icon">
 						<a href="{{ config('app.facebook') }}" target="_blank" class="social_button_facebook"><i class="fa fa-facebook"></i></a> 
-						<a href="{{ config('app.twitter') }}" target="_blank" class="social_button_twitter"><i class="fa fa-twitter"></i></a> 
+						<a href="{{ config('app.instagram') }}" target="_blank" class="social_button_twitter"><i class="fa fa-instagram"></i></a> 
 						<a href="{{ config('app.medium') }}" target="_blank" class="social_button_medium"><i class="fa fa-medium"></i></a>
 					</div>
 				</div>
 			</div>
 
 			<div class="col-md-6 col-sm-7 contact_right">
+				<form action="{{ url('/contact') }}" method="POST" autocomplete="off">
+
+				{{-- Notification starts here --}}
+				@if ( session()->has('success_msg') )
 				<div class="row">
-					<div class="form-group">
-						<input type="text" name="fullname" class="form-control" placeholder="Name">
+					<div class="alert alert-success alert-dismissible fade in mb-2" role="alert">
+						<span id="s_msg">{{ session()->get('success_msg') }}</span>
 					</div>
 				</div>
-				<div class="row">
-					<div class="form-group">
-						<input type="email" name="email" class="form-control" placeholder="Email">
+				@endif
+				{{-- Notification ends here --}}
+
+				{{ csrf_field() }}
+					<div class="row">
+						<div class="form-group @if($errors->has('name')) has-error @endif">
+							<input type="text" name="name" class="form-control" placeholder="Name">
+							@if ($errors->has('name'))
+								<span class="help-block help-block-error">{{ $errors->first('name') }}</span>
+							@endif
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="form-group">
-						<input type="text" name="subject" class="form-control" placeholder="Subject">
+					<div class="row">
+						<div class="form-group @if($errors->has('email')) has-error @endif">
+							<input type="email" name="email" class="form-control" placeholder="Email">
+							@if ($errors->has('email'))
+								<span class="help-block help-block-error">{{ $errors->first('email') }}</span>
+							@endif
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="form-group">
-						<textarea name="message" class="form-control" placeholder="Message"></textarea>
+					<div class="row">
+						<div class="form-group @if($errors->has('subject')) has-error @endif">
+							<input type="text" name="subject" class="form-control" placeholder="Subject">
+							@if ($errors->has('subject'))
+								<span class="help-block help-block-error">{{ $errors->first('subject') }}</span>
+							@endif
+						</div>
 					</div>
-				</div>			
-				<div class="row">
-					<div class="form-group">
-						<button class="btn btn-primary">Send</button>
+					<div class="row">
+						<div class="form-group @if($errors->has('message')) has-error @endif">
+							<textarea name="message" class="form-control" placeholder="Message"></textarea>
+							@if ($errors->has('message'))
+								<span class="help-block help-block-error">{{ $errors->first('message') }}</span>
+							@endif
+						</div>
+					</div>			
+					<div class="row">
+						<div class="form-group">
+							<button class="btn btn-primary">Send</button>
+						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</section>

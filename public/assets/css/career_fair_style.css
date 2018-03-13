@@ -1,0 +1,72 @@
+.header_career_fair {
+    background: rgba(101, 31, 221, 0.55)!important;
+    border-top: 4px solid rgb(77, 26, 173) !important; 
+}
+.career_fair_section {
+    padding:  2.5em 0 6em;
+    min-height: 500px;
+    background-color: rgba(232, 222, 252, 0.3);
+}
+
+.form_bg {
+    background-color: #fff;
+    max-width: 400px;
+    display: block;
+    position: relative;
+    padding: 40px;
+    height: 100%;
+    min-height: 450px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 0px 1px 15px 2px rgba(0,0,0,.2);
+}
+
+
+.form_bg .btn {
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4D1AAD;
+    border: 1px solid #3e1491;
+}
+
+.form_bg h3 {
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid #dedede;
+    color: #3e1491;
+}
+
+.form_bg h4 {
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.form_bg .row {
+    margin-bottom: 10px;
+}
+
+.form_bg input[type='text'], .form_bg input[type='email'], .form_bg select {
+    border-radius: 0;
+    padding-top: 9px;
+}
+
+.form_bg input[type='text']:focus, .form_bg input[type='email']:focus, .form_bg select:focus {
+    box-shadow: none;
+}
+
+.form_bg .help-block {
+    display: none !important;
+}
+
+@media(max-width: 360px) {
+    .form_bg {
+        padding: 25px;
+    }
+}

@@ -5,11 +5,16 @@
 @endsection
 
 @section('page_description')
-<meta name="description" content="">
+<meta name="description" content="NIIT is a blobal leader in skills and talent development and has established presence in Nigeria. {{ config('app.name') }} offers various programs like MMS (Software Engineering and Infrastructure Management), Oracle 12c, Server Infrastructure, CCNA, A+, N+, S+, web design and development, Graphic design, MIS and many more.">
 @endsection
 
 @section('keywords')
 <meta name="keywords" content="">
+@endsection
+
+@section('style')
+<link rel="stylesheet" href="/assets/plugins/flexslider/css/flexslider.css" type="text/css" media="all" property="" />
+<link href="/assets/plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -23,7 +28,7 @@
 					<li class="card">
 						<a class="card_flex_display" href="/courses/{{ $course->slug }}">
 							<span class="card_img">
-								<img src="/img/course-img/{{ $course->slug }}.jpg" alt="{{ $course->course_title }}">
+								<img src="/assets/img/course-img/{{ $course->photo }}" alt="{{ $course->course_title }}">
 							</span>
 							<span class="card_details card_flex_display card_flex">
 								<span class="card_title">
@@ -67,9 +72,9 @@
 											&nbsp;
 											<i class="fa fa-circle pull-right"></i>
 										</span>
-										<span class="event_day">{{ $event->event_date->format('j') }}</span>
-										<span class="event_month">{{ $event->event_date->format('M') }}</span>
-										<span class="event_year">{{ $event->event_date->format('Y') }}</span>
+										<span class="event_day">{{ $event->event_start_date->format('j') }}</span>
+										<span class="event_month">{{ $event->event_start_date->format('M') }}</span>
+										<span class="event_year">{{ $event->event_start_date->format('Y') }}</span>
 									</div>
 								</a> 
 							</div>
@@ -78,8 +83,10 @@
 									<a href="events/{{ $event->slug }}">{{ $event->event_title }}</a>
 								</div>
 								<div class="event_content">
-									{!! $event->shortContent !!}
-									<a href="events/{{ $event->slug }}">Read more</a>
+									<p>
+										{!! strip_tags($event->shortContent) !!}
+										<a href="{{ url('/events/' . $event->slug) }}">Read more</a>
+									</p>
 								</div>
 								<div class="more_event_detail">
 									<a href="events/{{ $event->slug }}">View details <i class="icon-arrow-right "></i></a>
@@ -96,63 +103,12 @@
 		</div>
 	</section>
 
-	<section class="alumni_section">
-		<div class="tint_layer">
-			<div class="container">
-				<div class="section_title">
-					<h2>Our Alumni</h2>
-				</div>
-				<div class="alumin_inner">
-				    <div id="owl-demo" class="owl-carousel">
-						<div class="item-owl">
-							<div class="alumni_review">
-								<p>
-									<img src="/img/left-quotes.png" alt=""> 
-									I am freelance Software Developer currently working on KadaOnline (www.facebook.com/kadacoders). I am a certified software Engineer from NIIT Kaduna, I have worked with Brainiac Software company as an intern. I am currently working on a software dictionary (https://github.com/deenkadirr). NIIT is a place for hard work and I am proud to be NIIT graduate.
-									<img src="/img/right-quotes.png" alt="">
-								</p>
-								<div class="alumni_img">
-									<img src="/img/alumni-1.jpg" class="img-responsive" alt="Shamsudeen Abdulkadir"/>
-								</div>
-								<h5>Shamsudeen Abdulkadir</h5>
-							</div>
-						</div>
-						<div class="item-owl">
-							<div class="alumni_review">
-								<p>
-									<img src="/img/left-quotes.png" alt=""> 
-									I am a Network Engineer currently working with NIIT Kaduna. I am a certified Network Engineer from NIIT Kaduna. I currently work with NIIT as a Network Engineering Instructor. 
-									<img src="/img/right-quotes.png" alt="">
-								</p>
-								<div class="alumni_img">
-									<img src="/img/alumni-2.jpg" class="img-responsive" alt="Chidinmma"/>
-								</div>
-								<h5>Chidinmma</h5>
-							</div>
-						</div>
-						<div class="item-owl">
-							<div class="alumni_review">
-								<p>
-									<img src="/img/left-quotes.png" alt="">
-									When I first came to NIIT, I was only looking forward to learn the basics of using a computer. But fortunately for me, I got a career as a software engineer who can develop Apps and Games for nearly every platform. I never knew Nigerians could develop Apps because I had the mindset that only the whites could make such, but NIIT changed that mindset. I now develop and teach people how to make Apps, thanks to NIIT.
-									<img src="/img/right-quotes.png" alt="">
-								</p>
-								<div class="alumni_img">
-									<img src="/img/alumni-3.jpg" class="img-responsive" alt="Abdulbasit Sa'id Ibrahim"/>
-								</div>
-								<h5>Abdulbasit Sa'id Ibrahim</h5>
-							</div>
-						</div>
-		            </div>
-				</div>
-			</div>
-		</div>
-	</section>
+	@include('pages.templates.partials._alumni')
 
 @endsection
 
 @section('scripts')
-<script defer src="/plugins/flexslider/js/jquery.flexslider.js"></script>
+<script defer src="/assets/plugins/flexslider/js/jquery.flexslider.js"></script>
 <script type="text/javascript">
 	$(window).load(function(){
 	  $('.flexslider').flexslider({
@@ -163,7 +119,7 @@
 	  });
 	});
 </script>
-<script src="/plugins/owl-carousel/js/owl.carousel.js"></script>
+<script src="/assets/plugins/owl-carousel/js/owl.carousel.js"></script>
 <script>
 	$(document).ready(function() {
 		$("#owl-demo").owlCarousel({
@@ -177,7 +133,7 @@
 	});
 </script>
 <script type="text/javascript">
-	$('.scroll_down a').click(function() {
+	$('.scroll_down').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
 	        var target = $(this.hash);
 	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

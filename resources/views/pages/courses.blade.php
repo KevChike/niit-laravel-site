@@ -23,7 +23,7 @@
 					<li class="card">
 						<a class="card_flex_display" href="/courses/{{ $course->slug }}">
 							<span class="card_img">
-								<img src="/img/course-img/{{ $course->slug }}.jpg" alt="{{ $course->course_title }}">
+								<img src="/assets/img/course-img/{{ $course->photo }}" alt="{{ $course->course_title }}">
 							</span>
 							<span class="card_details card_flex_display card_flex">
 								<span class="card_title">

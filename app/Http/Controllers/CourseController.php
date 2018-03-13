@@ -8,40 +8,39 @@ use App\Course;
 
 class CourseController extends Controller
 {
-    public function index()
+    /*public function index()
     {
         $courses = Course::paginate(12);
         return view('pages.courses', compact('courses'));
-    }
+    }*/
 
-    public function create()
+   /* public function create()
     {
-        return view('errors.404');
-        /*$course = new Course;
+        $course = new Course;
         $course->category = 'Rapid Employability Programmes';
         $courseTitle = 'Certificate Programme in MIS Skills';
         $course->course_title = $courseTitle;
         $course->course_details = '';
         $course->duration = '144 hours';
         $course->slug = $courseTitle;
-        $course->save();*/
+        $course->save();
     }
 
     public function store(Request $request)
     {
         return view('errors.404');
-    }
+    }*/
 
-    public function show($slug)
+    /*public function show($slug)
     {
         $course = Course::where('slug', $slug)->first();
         if ( $course )
             return view('pages.course_detail', compact('course')); 
         else
             return view('errors.404');
-    }
+    }*/
 
-    public function edit($id)
+    /*public function edit($id)
     {
         return view('errors.404');
     }
@@ -54,5 +53,5 @@ class CourseController extends Controller
     public function destroy($id)
     {
         return view('errors.404');
-    }
+    }*/
 }

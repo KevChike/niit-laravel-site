@@ -1,5 +1,4 @@
-
-	<div class="banner">  
+	<div class="banner">
 		<div class="header">
 			@include('pages.templates.partials._nav')
 		</div>
@@ -22,8 +21,10 @@
 					</ul> 
 				</div>
 			</div>
-		</div> 
-		<div class="scroll_down">
-			<a href="#section_1"><span class="arrow_down"><i class="fa fa-angle-down"></i></span></a>
 		</div>
+		<div class="text-center">
+			<a class="scroll_down" href="#section_1">
+	            <i class="fa fa-chevron-down"></i>
+	        </a>
+	    </div>
 	</div>

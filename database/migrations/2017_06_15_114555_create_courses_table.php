@@ -17,8 +17,10 @@ class CreateCoursesTable extends Migration
             $table->string('category');
             $table->text('course_title');
             $table->text('course_details');
+            $table->string('uid')->unique();
             $table->string('duration');
             $table->text('slug');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

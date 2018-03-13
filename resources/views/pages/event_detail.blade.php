@@ -20,10 +20,31 @@
 				<a href="{{ url('/events') }}"><i class="fa fa-long-arrow-left"></i> Back to Events</a>
 			</div>
 			<h2>{{ $event->event_title }}</h2>
-			<p class="event_detail_date">Event date: {{ $event->event_date->format('l, jS F, Y') }}</p>
-			<p>
+			<p class="event_detail_date">Event date: {{ $event->event_start_date->format('l, jS F, Y') }}</p>
+			<article>
 				{!! $event->event_description !!}
-			</p>
+			</article>
+
+			{{--  Display the register link only if the event is a current event (i.e still ongoing)  --}}
+			@if($event->event_type == 'career-fair' && $event->event_end_date >= date('Y-m-d H:i:s'))
+				<div class="event_reg_area">
+					Are you interested? <a href="{{ url('/career-fair') }}">Register</a>
+				</div>
+			@endif
+
+			@if($event->event_type == 'offer' && $event->event_end_date >= date('Y-m-d H:i:s'))
+				<div class="event_reg_area">
+					Are you interested? <a href="{{ url('/offers') }}">Register</a>
+				</div>
+			@endif
+			
+			@if($event->event_type == 'scholarship' && $event->event_end_date >= date('Y-m-d H:i:s'))
+				<div class="event_reg_area">
+					Are you interested? <a href="{{ url('/scholarship') }}">Register</a>
+				</div>
+			@endif
+
+
 		</div>
 
 		{{-- <div class="container" style="padding-top: 0em; border-top: 1px solid #dedede;">

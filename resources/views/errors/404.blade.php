@@ -3,7 +3,7 @@
     <head>
         <title>Error 404</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
-        <link href="/plugins/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+        <link href="/assets/plugins/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <style>
             html, body {
                 height: 100%;
@@ -68,7 +68,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <img src="/img/404.png" class="img-responsives">
+                    <img src="/assets/img/404.png" class="img-responsives">
                 </div>
                 <div class="col-md-3">
                     
