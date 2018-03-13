@@ -29,6 +29,27 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application details for NIIT Kaduna
+    |---------------------------------------------------------------------------
+
+    'name' => 'NIIT Kaduna',
+    'slug' => 'niit-kaduna',
+    'email' => 'info@niitkaduna.com',
+    'feedback_email' => 'info@niitkaduna.com',
+    'phone1' => '(+234) 807-509-0381',
+    'phone2' => '(+234) 807-509-0382',
+    'phone1_dailable' => '+2348075090381',
+    'phone2_dailable' => '+2348075090382',
+    'address' => 'Ek House, 5D Kanta Road, Kaduna, Nigeria.',
+    'facebook' => 'https://facebook.com/niitkadunacenter',
+    'twitter' => 'javascript:;',
+    'medium' => 'javascript:;',
+    'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.6529083372216!2d7.428681314798585!3d10.527979992490366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d3553c6881bc3%3A0x43af03a13938034d!2sNIIT+Kaduna+Nig!5e0!3m2!1sen!2sng!4v1483961035725',
+
+    */
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
