@@ -12,68 +12,71 @@
 <meta name="keywords" content="">
 @endsection
 
+@section('banner_title')
+<h3>Event Details</h3> <span class="location pull-right">You Are Here :  <a href="{{ url('/') }}">Home</a>  > <a href="{{ url('events') }}">Events</a>  >  <span class="r-page">Event Details</span></span>
+@endsection
+
 @section('content')
 
-	<section class="event_detail_section">
-		<div class="container event_description">
-			<div class="back_btn">
-				<a href="{{ url('/events') }}"><i class="fa fa-long-arrow-left"></i> Back to Events</a>
+    <div class="blog-1 blog-single">
+		<div class="container">
+			<div class="blog blog-main">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="item">
+						<h2>{{ $event->event_title }}</h2>
+						<div class="post-info">
+							<span class="category"><strong>Event date:</strong> {{ $event->event_start_date->format('l, jS F, Y') }}</span>
+							@if($event->event_time != '')
+								<span class="date"><strong>Event date:</strong> {{ $event->event_time }}</span>
+							@endif
+						</div>
+						{!! $event->event_description !!}
+					</div>
+				</div>		
 			</div>
-			<h2>{{ $event->event_title }}</h2>
-			<p class="event_detail_date">Event date: {{ $event->event_start_date->format('l, jS F, Y') }}</p>
-			<article>
-				{!! $event->event_description !!}
-			</article>
-
-			{{--  Display the register link only if the event is a current event (i.e still ongoing)  --}}
-			@if($event->event_type == 'career-fair' && $event->event_end_date >= date('Y-m-d H:i:s'))
-				<div class="event_reg_area">
-					Are you interested? <a href="{{ url('/career-fair') }}">Register</a>
-				</div>
-			@endif
-
-			@if($event->event_type == 'offer' && $event->event_end_date >= date('Y-m-d H:i:s'))
-				<div class="event_reg_area">
-					Are you interested? <a href="{{ url('/offers') }}">Register</a>
-				</div>
-			@endif
-			
-			@if($event->event_type == 'scholarship' && $event->event_end_date >= date('Y-m-d H:i:s'))
-				<div class="event_reg_area">
-					Are you interested? <a href="{{ url('/scholarship') }}">Register</a>
-				</div>
-			@endif
-
-
 		</div>
+	</div>
 
-		{{-- <div class="container" style="padding-top: 0em; border-top: 1px solid #dedede;">
-			<div class="event_footer">
-	            <span>
-					<a class="prev_event" title="" href="javascript:;">
-						<i class="fa fa-chevron-left"></i>
-	                    <div>
-	                        <b>Previous</b>
-	                        <div class="event_footer_title">
-	                            Previous event                     
+	<div class="course-single" style="padding-top: 30px;">
+		<div class="container">
+			<div class="col-md-12">
+				<h2 class="heading-2">You May Like</h2>
+			</div>
+			<div class="courses">
+				@forelse( $related_courses as $related_course )
+					<div class="cc card_flex_display">
+						<div class="box">
+							<a href="{{ url('courses') . '/' . $related_course->slug }} ">
+								<div class="ovrly">
+									<img src="{{ asset('assets/images/course-img') . '/' . $related_course->slug . '.jpg' }}" class="c-pic img-responsive" alt="" />
+									<div class="after"></div>
+								</div>
+							</a>
+							<div class="info">
+								<a href="{{ url('courses') . '/' . $related_course->slug }} "><h3 style="text-transform: uppercase;">{{ $related_course->course_title }}</h3></a>
+								<div class="stars">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i> <br>
+									<span class="learners"> {{ $related_course->category }} </span>
+								</div>
+								<div class="date">
+									<i class="fa fa-clock-o"></i> {{ $related_course->duration }}
+								</div>
 							</div>
-	                    </div>
-	                </a>
-				</span>
-	            
-	            <span>
-					<a class="next_event" title="" href="javascript:;">
-	                    <div>
-	                        <b>Next</b>
-	                        <div class="event_footer_title">
-	                            Next event
-							</div>
-	                    </div>
-	                    <i class="fa fa-chevron-right"></i>
-	                </a>
-				</span>
-	        </div>
-	    </div> --}}
-	</section>
+						</div>
+					</div>
+				@empty
+					<div class="welcome">
+	                    <h2>No course avaliable</h2>
+	                </div>
+				@endforelse
+			</div>
+		</div>
+	</div>
+
+	@include('pages.templates.partials._partners-universities')
 
 @endsection

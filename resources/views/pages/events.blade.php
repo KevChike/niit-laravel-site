@@ -12,56 +12,44 @@
 <meta name="keywords" content="">
 @endsection
 
+@section('banner_title')
+<h3>Events</h3> <span class="location pull-right">You Are Here :  <a href="{{ url('/') }}">Home</a>  >  <span class="r-page">Events</span></span>
+@endsection
+
 @section('content')
 
-	<section class="upcoming_event_section" style="padding-top: 6em;">
+	<div class="events">
 		<div class="container">
-			<h2>Upcoming Events</h2>
-			<ul class="card_wrapper">
+			<div class="col-md-12">
 				@forelse( $events as $event )
-					<li class="event_card">
-						<div class="event_card_inner">
-							<div class="event_card_inner_left">
-								<a href="{{ url('/events/' . $event->slug) }}">
-									<div class="event_date">
-										<span class="calendar_top">
-											<i class="fa fa-circle pull-left"></i>
-											&nbsp;
-											<i class="fa fa-circle pull-right"></i>
+					<div class="event">
+						<div class="media">
+						  	<div class="media-body">
+								<h4 class="media-heading">{{ $event->event_title }}</h4>
+								<div class="e-tags">
+									<span class="day-tag">{{ $event->event_start_date->format('l, jS F, Y') }}</span>
+									@if($event->event_time != '')
+										<span class="time-tag">
+											{{ $event->event_time }}
 										</span>
-										<span class="event_day">{{ $event->event_start_date->format('j') }}</span>
-										<span class="event_month">{{ $event->event_start_date->format('M') }}</span>
-										<span class="event_year">{{ $event->event_start_date->format('Y') }}</span>
-									</div>
-								</a> 
-							</div>
-							<div class="card_flex">
-								<div class="event_title">
-									<a href="{{ url('/events/' . $event->slug) }}">{{ $event->event_title }}</a>
+									@endif
 								</div>
-								<div class="event_content">
-									<p>
-										{!! $event->shortContent !!}
-										<a href="{{ url('/events/' . $event->slug) }}">Read more</a>
-									</p>
-								</div>
-								<div class="more_event_detail">
-									<a href="{{ url('/events/' . $event->slug) }}">View details <i class="icon-arrow-right "></i></a>
-								</div>
-							</div>
+								<p> {!! $event->shortContent !!} </p>
+								<a href="{{ url('events/' . $event->slug) }}" class="r-more">Read More  >></a>
+						  	</div>
 						</div>
-					</li>
+					</div>
 				@empty
-					<div class="note note-info">
-	                    <h4 class="">No event avaliable</h4>
+					<div class="welcome">
+	                    <h2>No event avaliable</h2>
 	                </div>
 				@endforelse
-			</ul>
-
-			<div class="see_more_section">
-				
+			</div>
+			
+			<div class="col-md-12 pagi">
+				{{ $events->links() }}
 			</div>
 		</div>
-	</section>
+	</div>
 
 @endsection

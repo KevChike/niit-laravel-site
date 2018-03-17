@@ -1,32 +1,56 @@
+	<div class="container">
+		<div class="col-md-12 top-bar">
+			<div class="left">
+				<span class="txt-1">Have A Question?</span>
+				<span class="txt-2"><i class="fa fa-phone"></i> {{ config('app.phone1') }}</span>
+				<span class="txt-3"><i class="fa fa-envelope-o"></i> {{ config('app.email') }}</span>
+			</div>
+			<div class="right">
+				<ul class="top-socials">
+					<li><a href="{{ config('app.facebook') }}"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="{{ config('app.instagram') }}"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="{{ config('app.medium') }}"><i class="fa fa-medium"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+	<nav class="navbar navbar-default">
+		<div class="container container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand visible-lg" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo-') . config('app.slug') . '.png' }}" alt="" /></a>
+				<a class="navbar-brand hidden-lg" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo-sm-') . config('app.slug') . '.png' }}" alt="" /></a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  	<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="{{ url('/') }}">HOME</a></li>
+					<li class="dropdown"><a href="{{ url('courses') }}">COURSES</a></li>
+					<li class="dropdown"><a href="{{ url('events') }}">EVENTS</a></li>
+					<li class="dropdown"><a href="{{ config('app.medium') }}">BLOG</a></li>
+					<li class="dropdown"><a href="{{ url('about') }}">ABOUT</a></li>
+					<li class="dropdown"><a href="{{ url('contact') }}">CONTACT</a></li>				
+			  </ul>
+			</div>
+		</div>
+	</nav>
 
-			<nav class="navbar navbar-default">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#burger" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a href="{{ url('/') }}"><img src="/assets/img/logo-{{ config('app.slug') }}.png"></a>
-					</div>
-					<div class="collapse navbar-collapse" id="burger">
-						<ul class="nav navbar-nav navbar-left">
-							<li><a href="{{ url('/courses') }}" class="btn hover_effect">Courses</a></li>   
-							<li><a href="{{ url('/events') }}" class="btn hover_effect">Events</a></li>
-							<li><a href="{{ config('app.medium') }}" class="btn hover_effect">Blog</a></li>
-							<li><a href="{{ url('/about') }}" class="btn hover_effect">About</a></li>
-							<li><a href="{{ url('/contact') }}" class="btn hover_effect">Contact</a></li>
-						</ul> 
-						<div class="social_icon">
-							<a href="{{ config('app.facebook') }}" target="_blank" class="social_button_facebook"><i class="fa fa-facebook"></i></a> 
-							<a href="{{ config('app.instagram') }}" target="_blank" class="social_button_twitter"><i class="fa fa-instagram"></i></a>
-							<a href="{{ config('app.medium') }}" target="_blank" class="social_button_medium"><i class="fa fa-medium"></i></a>  
-						</div> 
-						{{-- <div class="social_icon" style="margin:0;">
-							<a href="{{ url('/scholarship') }}" class="campaign">2017 Scholarship</a>
-						</div> --}}
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-			</nav>
+	<div class="mobile-menu">
+		<div class="container">
+		<div class="mobile-logo"><a class="#" href="#"><img src="{{ asset('assets/images/logo-sm-') . config('app.slug') . '.png' }}" alt="" /></a></div>
+		<ul id="menu">
+			<li><a href="{{ url('/') }}">Home</a></li>
+			<li><a href="{{ url('courses') }}">Courses</a></li>
+			<li><a href="{{ url('events') }}">Events</a></li>
+			<li><a href="{{ config('app.medium') }}">Blog</a></li>
+			<li><a href="{{ url('about') }}">About</a></li>
+			<li><a href="{{ url('contact') }}">Contact</a></li>
+		</ul>
+		</div>
+	</div>
+	

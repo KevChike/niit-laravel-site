@@ -14,7 +14,7 @@ class StaticPageDisplayController extends Controller
     {
     	$events = Event::where('live', 1)
                     ->orderBy('event_start_date', 'ASC')
-                    ->take(5)
+                    ->take(4)
                     ->get();
 
         $courses = Course::take(8)->get();
@@ -59,7 +59,7 @@ class StaticPageDisplayController extends Controller
     {
         $events = Event::where('live', 1)
                     ->orderBy('event_start_date', 'asc')
-                    ->get();
+                    ->paginate(12);
 
         return view('pages.events', compact('events'));
     }
@@ -67,8 +67,11 @@ class StaticPageDisplayController extends Controller
     public function eventDetail($slug)
     {
         $event = Event::where('slug', $slug)->first();
+
+        $related_courses = Course::inRandomOrder()->take(4)->get();
+
         if ( $event )
-            return view('pages.event_detail', compact('event')); 
+            return view('pages.event_detail', compact('event', 'related_courses')); 
         else
             return view('errors.404');
     }
@@ -82,8 +85,11 @@ class StaticPageDisplayController extends Controller
     public function courseDetails($slug)
     {
         $course = Course::where('slug', $slug)->first();
+
+        $related_courses = Course::inRandomOrder()->take(4)->get();
+        
         if ( $course )
-            return view('pages.course_detail', compact('course')); 
+            return view('pages.course_detail', compact('course', 'related_courses')); 
         else
             return view('errors.404');
     }

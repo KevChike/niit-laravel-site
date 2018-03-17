@@ -1,13 +1,15 @@
 @include('pages.templates.partials._header')
 	
-	{{--  @include('pages.templates.partials._campaign_notification')  --}}
-
-	<div class="header header_2">
-			@include('pages.templates.partials._nav')
-	</div>
-
+	<header class="header-4 header-2">
+		@include('pages.templates.partials._nav')
+		
+		<div class="container main-text">
+			<div class="col-md-12">
+				@yield('banner_title')
+			</div>
+		</div>
+	</header>
+	
 	@yield('content')
-
-	@include('pages.templates.partials._quick-contact')
 	
 @include('pages.templates.partials._footer')

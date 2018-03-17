@@ -12,86 +12,79 @@
 <meta name="keywords" content="">
 @endsection
 
+@section('banner_title')
+<h3>Contact Us</h3> <span class="location pull-right">You Are Here :  <a href="{{ url('/') }}">Home</a>  >  <span class="r-page">Contact Us</span></span>
+@endsection
+
 @section('content')
-	<section class="contact_section">
-		<div class="container">
-			<div class="col-md-6 col-sm-5 contact_left">
-				<div class="row">
-					<h2>Say Hello</h2>
-					<p>
-						<span>Address:</span><br>{{ config('app.address') }} 
-					</p>
-					<p class="phone"><span>Phone: </span><br>{{ config('app.phone1') }}, <br>{{ config('app.phone2') }} </p>
-					<p class="email"><span>Email: </span><br>{{ config('app.email') }} </p>
-					<h3>Follow us on</h3>
-					<div class="social_icon">
-						<a href="{{ config('app.facebook') }}" target="_blank" class="social_button_facebook"><i class="fa fa-facebook"></i></a> 
-						<a href="{{ config('app.instagram') }}" target="_blank" class="social_button_twitter"><i class="fa fa-instagram"></i></a> 
-						<a href="{{ config('app.medium') }}" target="_blank" class="social_button_medium"><i class="fa fa-medium"></i></a>
-					</div>
-				</div>
-			</div>
+	
+	<div class="contact contact-2">
+		<div class="container">			
+			<div class="cnt">
+				<div class="col-md-7">
+					<h3>Get in touch with us</h3>
+					<form action="{{ url('/contact') }}" method="POST" autocomplete="off" id="details-form">
+						{{ csrf_field() }}
 
-			<div class="col-md-6 col-sm-7 contact_right">
-				<form action="{{ url('/contact') }}" method="POST" autocomplete="off">
-
-				{{-- Notification starts here --}}
-				@if ( session()->has('success_msg') )
-				<div class="row">
-					<div class="alert alert-success alert-dismissible fade in mb-2" role="alert">
-						<span id="s_msg">{{ session()->get('success_msg') }}</span>
-					</div>
-				</div>
-				@endif
-				{{-- Notification ends here --}}
-
-				{{ csrf_field() }}
-					<div class="row">
 						<div class="form-group @if($errors->has('name')) has-error @endif">
-							<input type="text" name="name" class="form-control" placeholder="Name">
+							<input type="text" name="name" class="form-control error" required placeholder="Enter Your Full Name">
 							@if ($errors->has('name'))
 								<span class="help-block help-block-error">{{ $errors->first('name') }}</span>
 							@endif
 						</div>
-					</div>
-					<div class="row">
+
 						<div class="form-group @if($errors->has('email')) has-error @endif">
-							<input type="email" name="email" class="form-control" placeholder="Email">
+							<input type="text" name="email" class="form-control" required placeholder="Enter Your Email">
 							@if ($errors->has('email'))
 								<span class="help-block help-block-error">{{ $errors->first('email') }}</span>
 							@endif
 						</div>
-					</div>
-					<div class="row">
+
 						<div class="form-group @if($errors->has('subject')) has-error @endif">
-							<input type="text" name="subject" class="form-control" placeholder="Subject">
+							<input type="text" name="subject" class="form-control" required placeholder="Enter Your Subject">
 							@if ($errors->has('subject'))
 								<span class="help-block help-block-error">{{ $errors->first('subject') }}</span>
 							@endif
 						</div>
-					</div>
-					<div class="row">
+
 						<div class="form-group @if($errors->has('message')) has-error @endif">
-							<textarea name="message" class="form-control" placeholder="Message"></textarea>
+							<textarea name="message" required placeholder="Write Your Message" style="resize: none;"></textarea>
 							@if ($errors->has('message'))
 								<span class="help-block help-block-error">{{ $errors->first('message') }}</span>
 							@endif
 						</div>
-					</div>			
-					<div class="row">
-						<div class="form-group">
-							<button class="btn btn-primary">Send</button>
-						</div>
-					</div>
-				</form>
+
+						<div class="clearfix"></div>
+						<button type="submit" class="p-btn" value="Send Message">SEND</button>
+						
+					</form>
+				</div>
+				
+				<div class="col-md-5 info">
+					<ul class="v-info">
+						<li><i class="fa fa-home"></i> <span class="txt"> {{ config('app.address') }} </span></li>
+						<li><i class="fa fa-phone"></i> <span class="txt"> {{ config('app.phone1') }} <br> {{ config('app.phone2') }} </span></li>
+						<li><i class="fa fa-envelope-o"></i> <span class="txt"> {{ config('app.email') }} </span></li>
+						<li><i class="fa fa-globe"></i> <span class="txt"> {{ config('app.website') }} </span></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</section>
 
-	<section>
-		<div class="map">
-			<iframe src="{{ config('app.map') }}" style="border:0"></iframe>
-		</div>
-	</section>
+			<div class="clearfix"></div>
 
+			<div class="col-md-12 map">
+				{{-- <div id="map"></div> --}}
+				<iframe src="{{ config('app.map') }}" style="border:0; width:100%; min-height:400px; margin-bottom: 80px;"></iframe>
+			</div>
+					
+		</div>
+	</div>
+
+
+@endsection
+
+@section('scripts')
+<!-- Google Maps -->
+	{{-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="/assets/js/map.js"></script> --}}
 @endsection

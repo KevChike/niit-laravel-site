@@ -12,102 +12,126 @@
 <meta name="keywords" content="">
 @endsection
 
-@section('style')
+{{-- @section('style')
 <link rel="stylesheet" href="/assets/plugins/flexslider/css/flexslider.css" type="text/css" media="all" property="" />
 <link href="/assets/plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet">
-@endsection
+@endsection --}}
 
 @section('content')
-	<section class="course_section" id="section_1">
-		<div class="container">
-			<div class="section_title">
-				<h2>Our Courses</h2>
-			</div>
-			<ul class="card_group">
-				@forelse( $courses as $course )
-					<li class="card">
-						<a class="card_flex_display" href="/courses/{{ $course->slug }}">
-							<span class="card_img">
-								<img src="/assets/img/course-img/{{ $course->photo }}" alt="{{ $course->course_title }}">
-							</span>
-							<span class="card_details card_flex_display card_flex">
-								<span class="card_title">
-									{{ $course->course_title }}
-								</span>
-								<span class="card_subtitle card_flex">
-									{{ $course->category }}
-								</span>
-								<span class="card_footer">
-									<i class="fa fa-clock-o footer_icon"></i><span class="duration card_flex"> {{ $course->duration }} </span>
-								</span>
-							</span>
-						</a>
-					</li>
-				@empty
-					<div class="note note-info">
-	                    <h4 class="">No course avaliable</h4>
-	                </div>
-				@endforelse
-			</ul>
-			@if( count( $courses ) > 0 )
-				<div class="see_more_section">
-					<a href="{{ url('/courses') }}" class="see_all">See All</a>
-				</div>
-			@endif
-		</div>
-	</section>
+	@include('pages.templates.partials._fact-bar')
 
-	<section class="upcoming_event_section" style="padding-top: 1.5em;">
+	<div class="courses-1">
 		<div class="container">
-			<h2>Upcoming Events</h2>
-			<ul class="card_wrapper">
-				@forelse( $events as $event )
-					<li class="event_card">
-						<div class="event_card_inner">
-							<div class="event_card_inner_left">
-								<a href="events/{{ $event->slug }}">
-									<div class="event_date">
-										<span class="calendar_top">
-											<i class="fa fa-circle pull-left"></i>
-											&nbsp;
-											<i class="fa fa-circle pull-right"></i>
-										</span>
-										<span class="event_day">{{ $event->event_start_date->format('j') }}</span>
-										<span class="event_month">{{ $event->event_start_date->format('M') }}</span>
-										<span class="event_year">{{ $event->event_start_date->format('Y') }}</span>
-									</div>
-								</a> 
-							</div>
-							<div class="card_flex">
-								<div class="event_title">
-									<a href="events/{{ $event->slug }}">{{ $event->event_title }}</a>
+			<div class="col-md-12 welcome">
+				<h2>COURSES WE PROVIDE</h2>
+				<p>Check out our awesome courses</p>
+			</div>
+			<div class="courses">
+				@forelse( $courses as $course )
+					<div class="cc card_flex_display">
+						<div class="box">
+							<a href="{{ url('courses') . '/' . $course->slug }}">
+								<div class="ovrly">
+									<img src="{{ asset('assets/images/course-img') . '/' . $course->slug . '.jpg' }}" class="c-pic img-responsive" alt="" />
+									<div class="after"></div>
 								</div>
-								<div class="event_content">
-									<p>
-										{!! strip_tags($event->shortContent) !!}
-										<a href="{{ url('/events/' . $event->slug) }}">Read more</a>
-									</p>
+							</a>
+							<div class="info">
+								<a href="{{ url('courses') . '/' . $course->slug }}"><h3 style="text-transform: uppercase;">{{ $course->course_title }}</h3></a>
+								<div class="stars">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i> <br>
+									<span class="learners"> {{ $course->category }} </span>
 								</div>
-								<div class="more_event_detail">
-									<a href="events/{{ $event->slug }}">View details <i class="icon-arrow-right "></i></a>
+								<div class="date">
+									<i class="fa fa-clock-o"></i> {{ $course->duration }}
 								</div>
 							</div>
 						</div>
-					</li>
+					</div>
 				@empty
-					<div class="note note-info">
-	                    <h4 class="">No event avaliable</h4>
+					<div class="welcome">
+	                    <h2>No course avaliable</h2>
 	                </div>
 				@endforelse
-			</ul>
+				
+				<div class="col-md-12 pagi" style="margin: 30px 0;">
+					<a href="{{ url('courses') }}" class="btn-n btn-ex">VIEW ALL</a>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
+
+	<div class="services-1">
+		<div class="container">
+			<div class="col-md-3 col-sm-6">
+				<img src="{{ asset('assets/images/icons/1.png') }}" alt="" />
+				<h3>CLASSROOM LEARNING</h3>
+				<p>Access to certified instructors and high quality course content by industry experts</p>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img src="{{ asset('assets/images/icons/2.png') }}" alt="" />
+				<h3>EARN CERTIFICATE</h3>
+				<p>NIIT certification is recognized in over 40 countries. Earn a certification from us today.</p>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img src="{{ asset('assets/images/icons/3.png') }}" alt="" />
+				<h3>FLEXIBLE SCHEDULE</h3>
+				<p>Start any course at your own time and pace.</p>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img src="{{ asset('assets/images/icons/4.png') }}" alt="" />
+				<h3>24/7 SUPPORT</h3>
+				<p>Well trained customer support agents are avaliable 24/7 to give you necessary guidance.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="events" style="background-color: #6B7480;padding-top: 20px;">
+		<div class="col-md-12 welcome">
+			<h2 style="color: #fff;">UPCOMING EVENTS</h2>
+			<p style="color:#fff">You don't want to miss out</p>
+		</div>
+		<div class="container">
+			<div class="col-md-12">
+				@forelse( $events as $event )
+					<div class="event">
+						<div class="media">
+						  	<div class="media-body">
+								<h4 class="media-heading">{{ $event->event_title }}</h4>
+								<div class="e-tags">
+									<span class="day-tag">{{ $event->event_start_date->format('l, jS F, Y') }}</span>
+									@if($event->event_time != '')
+										<span class="time-tag">
+											{{ $event->event_time }}
+										</span>
+									@endif
+								</div>
+								<p> {!! $event->shortContent !!} </p>
+								<a href="{{ url('events/' . $event->slug) }}" class="r-more">Read More  >></a>
+						  	</div>
+						</div>
+					</div>
+				@empty
+					<div class="welcome">
+	                    <h2>No event avaliable</h2>
+	                </div>
+				@endforelse
+			</div>
+			<div class="col-md-12 pagi">
+				<a href="{{ url('events') }}" class="btn-n btn-ex">VIEW ALL</a>
+			</div>
+		</div>
+	</div>
 
 	@include('pages.templates.partials._alumni')
 
 @endsection
 
-@section('scripts')
+{{-- @section('scripts')
 <script defer src="/assets/plugins/flexslider/js/jquery.flexslider.js"></script>
 <script type="text/javascript">
 	$(window).load(function(){
@@ -147,4 +171,4 @@
 	});
 </script>
 
-@endsection
+@endsection --}}

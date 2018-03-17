@@ -14,7 +14,9 @@ return [
 
     'name' => 'NIIT Abuja',
     'niit_center' => 'Abuja',
+    'mother_company' => 'NIIT',
     'slug' => 'niit-abuja',
+    'website' => 'niitabuja.com',
     'email' => 'info@niitabuja.com',
     'feedback_email' => 'info@niitabuja.com',
     'phone1' => '(+234) 905-509-6016',
@@ -23,7 +25,8 @@ return [
     'phone2_dailable' => '+2349055096019',
     'address' => '8 Sirakoro Street, Off Blantrye Street, Wuse II, Abuja.',
     'facebook' => 'https://www.facebook.com/niitabujacenter',
-    'twitter' => 'https://twitter.com/niitabuja',
+    'twitter' => 'javascript:;',
+    'instagram' => 'https://www.instagram.com/niitabuja',
     'medium' => 'https://www.medium.com/niit-abuja',
     'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.910784683174!2d7.484082814402655!3d9.071892193491113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a547bc0f99f%3A0xc2529495732e7278!2sSirakoro+St%2C+Abuja!5e0!3m2!1sen!2sng!4v1475077041178',
 
@@ -33,7 +36,10 @@ return [
     |---------------------------------------------------------------------------
 
     'name' => 'NIIT Kaduna',
+    'niit_center' => 'Kaduna',
+    'mother_company' => 'NIIT',
     'slug' => 'niit-kaduna',
+    'website' => 'niitkaduna.com',
     'email' => 'info@niitkaduna.com',
     'feedback_email' => 'info@niitkaduna.com',
     'phone1' => '(+234) 807-509-0381',
@@ -43,6 +49,7 @@ return [
     'address' => 'Ek House, 5D Kanta Road, Kaduna, Nigeria.',
     'facebook' => 'https://facebook.com/niitkadunacenter',
     'twitter' => 'javascript:;',
+    'instagram' => 'javascript:;',
     'medium' => 'javascript:;',
     'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.6529083372216!2d7.428681314798585!3d10.527979992490366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104d3553c6881bc3%3A0x43af03a13938034d!2sNIIT+Kaduna+Nig!5e0!3m2!1sen!2sng!4v1483961035725',
 
