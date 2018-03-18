@@ -1,21 +1,34 @@
 @extends('pages.templates.master_index')
 
 @section('page_title')
-<title>{{ config('app.name') }}</title>
+	<title>{{ config('app.name') }}</title>
 @endsection
 
 @section('page_description')
-<meta name="description" content="NIIT is a blobal leader in skills and talent development and has established presence in Nigeria. {{ config('app.name') }} offers various programs like MMS (Software Engineering and Infrastructure Management), Oracle 12c, Server Infrastructure, CCNA, A+, N+, S+, web design and development, Graphic design, MIS and many more.">
+	<meta name="description" content="NIIT is a blobal leader in skills and talent development and has established presence in Nigeria. {{ config('app.name') }} offers various programs like MMS (Software Engineering and Infrastructure Management), Oracle 12c, Server Infrastructure, CCNA, A+, N+, S+, web design and development, Graphic design, MIS and many more.">
 @endsection
 
 @section('keywords')
-<meta name="keywords" content="">
+	<meta name="keywords" content="">
 @endsection
 
-{{-- @section('style')
-<link rel="stylesheet" href="/assets/plugins/flexslider/css/flexslider.css" type="text/css" media="all" property="" />
-<link href="/assets/plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet">
-@endsection --}}
+@section('style')
+	{{-- Owl stylesheet --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+     
+    {{-- Default Theme --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
+
+	{{-- RS5.0 Main Stylesheet --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/revolution/css/settings.css') }}">
+     
+    {{-- RS5.0 Layers and Navigation Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/revolution/css/layers.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/revolution/css/navigation.css') }}">
+    
+    {{-- bxSlider CSS file --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.bxslider.css') }}"  />
+@endsection
 
 @section('content')
 	@include('pages.templates.partials._fact-bar')

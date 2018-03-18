@@ -16,6 +16,7 @@ Route::get('/', 'StaticPageDisplayController@index');
 Route::get('/events', 'StaticPageDisplayController@event');
 Route::get('/events/{slug}', 'StaticPageDisplayController@eventDetail');
 Route::get('/courses', 'StaticPageDisplayController@course');
+Route::post('/courses', 'StaticPageDisplayController@postConsent');
 Route::get('/courses/{slug}', 'StaticPageDisplayController@courseDetails');
 Route::get('/about', 'StaticPageDisplayController@about');
 Route::get('/contact', 'StaticPageDisplayController@contact');

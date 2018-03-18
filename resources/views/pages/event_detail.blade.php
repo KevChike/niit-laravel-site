@@ -12,6 +12,14 @@
 <meta name="keywords" content="">
 @endsection
 
+@section('style')
+	{{-- Owl stylesheet --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+     
+    {{-- Default Theme --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
+@endsection
+
 @section('banner_title')
 <h3>Event Details</h3> <span class="location pull-right">You Are Here :  <a href="{{ url('/') }}">Home</a>  > <a href="{{ url('events') }}">Events</a>  >  <span class="r-page">Event Details</span></span>
 @endsection

@@ -13,8 +13,11 @@
 @endsection
 
 @section('style')
-<link rel="stylesheet" href="/assets/plugins/flexslider/css/flexslider.css" type="text/css" media="all" property="" />
-<link href="/assets/plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet">
+	{{-- Owl stylesheet --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+     
+    {{-- Default Theme --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
 @endsection
 
 @section('banner_title')

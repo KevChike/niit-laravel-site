@@ -12,6 +12,14 @@
 <meta name="keywords" content="">
 @endsection
 
+@section('style')
+	{{-- Owl stylesheet --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+     
+    {{-- Default Theme --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
+@endsection
+
 @section('banner_title')
 <h3>Events</h3> <span class="location pull-right">You Are Here :  <a href="{{ url('/') }}">Home</a>  >  <span class="r-page">Events</span></span>
 @endsection
@@ -52,4 +60,6 @@
 		</div>
 	</div>
 
+	@include('pages.templates.partials._partners-universities')
+	
 @endsection

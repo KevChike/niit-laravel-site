@@ -12,6 +12,14 @@
 <meta name="keywords" content="{{ $course->course_title }}">
 @endsection
 
+@section('style')
+	{{-- Owl stylesheet --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
+     
+    {{-- Default Theme --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
+@endsection
+
 @section('banner_title')
 <h3>Course Details</h3> <span class="location pull-right">You Are Here :  <a href="{{ url('/') }}">Home</a>  >  <a href="{{ url('courses') }}">Courses</a>  >  <span class="r-page">Course Details</span></span>
 @endsection
@@ -56,9 +64,36 @@
 						@else
 							<div class="a-name">LEARN THE RIGHT WAY</div>
 						@endif
-						<div class="a-position"></div>
-						<a href="#" class="c-btn">TAKE THIS COURSE</a>
-					</div>	
+						
+						<br>
+
+						@if(isset($_COOKIE[$course->slug]))
+							<div class="a-position">Thanks for showing interest in this course</div>
+							<a href="{{ url('courses') }}" class="c-btn">SEE MORE COURSES</a>
+						@else
+							<div class="a-position">Are you interested in this course?</div>
+							<a href="javascript:;" class="c-btn" id="yes">YES, I AM</a>
+						@endif
+						<br>
+						
+						@if(isset($_COOKIE[$course->slug]))
+							<div id="consent_form" style="padding: 30px 30px 0; display: none;">
+								<div class="r-txt">You sent a message not too long</div>
+							</div>
+						@else
+							<div id="consent_form" style="padding: 30px 30px 0; display: none;">
+								<div class="r-txt">Please, enter your details so that we can get back to you</div>
+								<form action="{{ url('/courses') }}" method="POST" autocomplete="off">
+									{{ csrf_field() }}
+									<input type="text" name="name" class="form-control" placeholder="Enter Your Full Name" maxlength="100">
+									<input type="text" name="phone" class="form-control" placeholder="Enter Your Phone Number" maxlength="14">
+									<input type="email" name="email" class="form-control" placeholder="Enter Your Email" maxlength="100">
+									<input type="hidden" name="course" value="{{ $course->course_title }}">
+									<button class="l-btn btn" style="border-radius: 0;">Am interested</button>
+								</form>
+							</div>
+						@endif
+					</div>
 				</div>
 				
 				<div class="col-md-6 right">
@@ -152,4 +187,23 @@
 
 	@include('pages.templates.partials._partners-universities')
 	
+@endsection
+
+@section('scripts')
+	<script type="text/javascript">
+		$('document').ready(function(){
+			
+			$('#yes').click(function(){
+				$('#consent_form').slideToggle(function(){
+					if($('#yes').text() == 'YES, I AM'){
+						$('#yes').text('MAYBE LATER');
+					} else {
+						$('#yes').text('YES, I AM');
+					}
+				});
+			});
+
+		});
+	</script>
+
 @endsection

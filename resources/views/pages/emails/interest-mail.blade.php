@@ -1,22 +1,3 @@
-{{-- <div style="font-family:Arial;line-height:30px;font-size:15px;margin:0 auto;width:90%;">
-	<div style="background-color:#3B5998;color:#fff;padding:15px 0;text-align:center;margin:15px 0;">
-		CONTACT PAGE FEEDBACK
-	</div>
-	<div style="color:#4b4b4b;padding:0 20px 15px 20px;">
-		Sender: {{ $sender_name }}<br>
-        Email: <a href="mailto:{{ $sender_email }}" style="color:#3b5998;text-decoration:none;">{{ $sender_email }}</a><br>
-		Subject: {{ $sender_subject }}
-	</div>
-	<div style="border:solid #c2cad8;border-width:1px 0;padding:25px 20px;color:#252525;">
-		{{ $sender_msg }}
-	</div>
-	<div style="font-size:12px;text-align:center;padding:10px 0;color:#626262;background-color:#E9EAED">
-		This message was sent from the contact page on {{ config('app.name') }}
-	</div>
-</div> --}}
-
-
-
 <table style="border-spacing:0;border-collapse:collapse;vertical-align:top;height:100%;width:100%;table-layout:fixed" width="100%" cellspacing="0" cellpadding="0" border="0">
     <tbody>
         <tr style="vertical-align:top">
@@ -58,8 +39,6 @@
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
-                                                                
-                                                                
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -68,8 +47,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                
-                                
                             </td>
                         </tr>
                     </tbody>
@@ -78,8 +55,6 @@
                     <tbody>
                         <tr style="vertical-align:top">
                             <td style="word-break:break-word;border-collapse:collapse!important;vertical-align:top" width="100%">
-                                
-                                
                                 <table style="border-spacing:0;border-collapse:collapse;vertical-align:top;max-width:500px;margin:0 auto;text-align:inherit" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
                                     <tbody>
                                         <tr style="vertical-align:top">
@@ -88,8 +63,6 @@
                                                     <tbody>
                                                         <tr style="vertical-align:top">
                                                             <td style="word-break:break-word;border-collapse:collapse!important;vertical-align:top;text-align:center;font-size:0">
-                                                                
-                                                                
                                                                 <div style="display:inline-block;vertical-align:top;width:500px">
                                                                     <table style="border-spacing:0;border-collapse:separate;vertical-align:top" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
                                                                         <tbody>
@@ -101,15 +74,21 @@
                                                                                                 <td style="word-break:break-word;border-collapse:collapse!important;vertical-align:top;padding-top:60px;padding-right:30px;padding-bottom:30px;padding-left:30px;text-align:left" align="left">
                                                                                                     <div style="color:#555555;line-height:120%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif">
                                                                                                         <div style="font-size:14px;line-height:15px;color:#555555;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif">
-                                                                                                        	<h3 style="margin:0 0 10px 0;font-size:16px;font-weight:bold;line-height:22px">Feedback mail</h3>
+                                                                                                        	<h3 style="margin:0 0 10px 0;font-size:16px;font-weight:bold;line-height:22px">Someone is interested in a course.</h3>
                                                                                                             <p style="margin:0 0 10px 0;font-size:14px;line-height:20px">
-                                                                                                            This message was sent from {{ config('app.name') }} contact page.</p>
-                                                                                                            <p style="margin:0 0 10px 0;font-size:14px;line-height:20px"><b>Sender:</b> {{ $sender_name }} <br> <b>Sender's email:</b>  <a href="mailto:{{ $sender_email }}"> {{ $sender_email }} </a> <br> <b>Subject:</b> {{ $sender_subject }}</p>
-                                                                                                            
+                                                                                                            This message was sent from {{ config('app.name') }} course page.</p>
                                                                                                             <div style="margin-top:40px;margin-bottom:20px;height:1px;background:#e5e5e5"></div>
-                                                                                                            <p style="margin:0 0 10px 0;font-size:15px;font-weight:bold;line-height:20px">Message
+                                                                                                            <p style="margin:0 0 10px 0;font-size:15px;font-weight:bold;line-height:20px">
+                                                                                                                 Hello {{ config('app.name') }}, <br><br>
+                                                                                                                My name is  <strong>{{ $sender_name }}</strong>. I am interested in this course: <strong>{{ $interested_course }}.</strong> <br>
+
+                                                                                                                I will love to know more about the course.<br><br>
+
+                                                                                                                You can call me on, {{ $sender_phone }} or send an email to {{ $sender_email }}. <br><br>
+
+                                                                                                                Regards, <br>
+                                                                                                                {{ $sender_name }}
                                                                                                             </p>
-                                                                                                            <p style="margin:0 0 10px 0;font-size:15px;line-height:20px">{{ $sender_msg }}</p>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </td>

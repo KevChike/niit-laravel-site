@@ -11,9 +11,6 @@
 					<li>
 						<div class="media">
 						  <div class="media-left">
-							<a href="#">
-							  <img class="media-object" src="images/blog/f-1.png" alt="">
-							</a>
 						  </div>
 						  <div class="media-body">
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu unde.</p>
@@ -25,9 +22,6 @@
 					<li>
 						<div class="media">
 						  <div class="media-left">
-							<a href="#">
-							  <img class="media-object" src="images/blog/f-2.png" alt="">
-							</a>
 						  </div>
 						  <div class="media-body">
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu unde.</p>

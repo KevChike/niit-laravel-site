@@ -93,4 +93,30 @@ class StaticPageDisplayController extends Controller
         else
             return view('errors.404');
     }
+
+    public function postConsent(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'name' => 'required',
+            'phone' => 'required'
+        ]);
+
+        /*Mail::send('pages.emails.interest-mail', [
+                'interested_course' => $request->course, 
+                'sender_name' => $request->name, 
+                'sender_email' => $request->email, 
+                'sender_phone' => $request->phone
+        ], function($message) {
+            $message->to(config('app.feedback_email'));
+
+            $message->subject(config('app.name') . ' Someone is interested in a course');
+        });*/
+
+        $cookie_name = str_slug($request->course);
+        $cookie_value = $request->course;
+        setcookie($cookie_name, $cookie_value, time() + (3600), "/"); // 3600 = 1 hour i.e 60sec * 60min = 3600secs
+
+        return redirect()->back()->with('success_msg', 'We will get back to you very soon!');
+    }
 }

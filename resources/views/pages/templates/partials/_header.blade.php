@@ -27,25 +27,12 @@
     
     <!-- theme custom -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+
     <!-- mobile menu -->
     <link rel="stylesheet" href="{{ asset('assets/css/slicknav.css') }}" />
-    
-    <!-- Owl stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css') }}">
-     
-    <!-- Default Theme -->
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
-    
-    <!-- RS5.0 Main Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/revolution/css/settings.css') }}">
-     
-    <!-- RS5.0 Layers and Navigation Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/revolution/css/layers.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/revolution/css/navigation.css') }}">
-    
-    <!-- bxSlider CSS file -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.bxslider.css') }}"  />
-    
+
+    @yield('style')
+       
 
     <!-- fonts -->
     {{-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -54,7 +41,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/fonts/font-awesome/css/font-awesome.min.css') }}" />
 
-    @yield('style')
+    
     <style type="text/css">
         .navbar {
             margin-bottom: 0;
