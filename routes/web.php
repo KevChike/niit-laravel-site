@@ -15,9 +15,13 @@
 Route::get('/', 'StaticPageDisplayController@index');
 Route::get('/events', 'StaticPageDisplayController@event');
 Route::get('/events/{slug}', 'StaticPageDisplayController@eventDetail');
-Route::get('/courses', 'StaticPageDisplayController@course');
-Route::post('/courses', 'StaticPageDisplayController@postConsent');
-Route::get('/courses/{slug}', 'StaticPageDisplayController@courseDetails');
+
+Route::get('/courses', 'CourseController@course');
+Route::get('/courses/{slug}', 'CourseController@courseDetails');
+Route::post('/courses', 'CourseController@postConsent');
+Route::get('/courses/s/{slug}', 'CourseController@mmsSoftware');
+Route::get('/courses/i/{slug}', 'CourseController@mmsInfrastructure');
+
 Route::get('/about', 'StaticPageDisplayController@about');
 Route::get('/contact', 'StaticPageDisplayController@contact');
 Route::post('/contact', 'StaticPageDisplayController@sendContactPageMail');

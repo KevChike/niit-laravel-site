@@ -1,11 +1,11 @@
 	<footer>
 		<div class="container">
-			<div class="col-md-3 sec-1">
+			<div class="col-md-4 sec-1">
 				<img src="{{ asset('assets/images/logo-') . config('app.slug') . '.png' }}" alt="" />
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+				<p>NIIT established its presence in Nigeria in 1999 and since then affirmed its support to prepare the youth in the country for lucrative IT careers. NIIT trains over 16,000 students in Nigeria every year and has shaped the careers of over 160,000 students in the past 16 years.</p>
 			</div>
 			
-			<div class="col-md-4 sec-2">
+			{{-- <div class="col-md-4 sec-2">
 				<h3>Latest News</h3>
 				<ul class="f-posts">
 					<li>
@@ -30,9 +30,9 @@
 						</div>
 					</li>
 				</ul>
-			</div>
+			</div> --}}
 			
-			<div class="col-md-2 sec-3">
+			<div class="col-md-2 col-md-offset-1 sec-3">
 				<h3>Quick Links</h3>
 				<ul class="q-links">
 					<li><a href="{{ url('/') }}">Home</a></li>
@@ -44,7 +44,7 @@
 				</ul>
 			</div>
 			
-			<div class="col-md-3 sec-4">
+			<div class="col-md-4 sec-4">
 				<h3>Contact Info</h3>
 				<ul class="address">
 					<li><i class="fa fa-home"></i> <span> {{ config('app.address') }} </span></li>
@@ -56,9 +56,6 @@
 					<li><a href="{{ config('app.facebook') }}"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="{{ config('app.instagram') }}"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="{{ config('app.medium') }}"><i class="fa fa-medium"></i></a></li>
-					{{-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="#"><i class="fa fa-rss"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li> --}}
 				</ul>
 			</div>
 

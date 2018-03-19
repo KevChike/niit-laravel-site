@@ -40,6 +40,78 @@
 				<p>Check out our awesome courses</p>
 			</div>
 			<div class="courses">
+				<div class="col-md-12 cc-2">
+					<div class="box">
+						<form class="form-inline">
+							<div class="form-group">
+								<a href="{{ url('courses/s/mms-software-engineering') }}"><img src="{{ asset('assets/images/course-img/thumbnails/certificate-in-network-support-and-maintenance.jpg') }}" alt="" /></a>
+							</div>
+							
+							<div class="form-group">
+								<div class="g-box">
+									<div class="info">
+										<a href="{{ url('courses/s/mms-software-engineering') }}"><h3>MMS - SOFTWARE ENGINEERING</h3></a>
+										<div class="stars">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<br>
+											<span class="learners"> Master Mind Series </span>
+										</div>
+										<div class="date">
+											<i class="fa fa-clock-o"></i> 2 years
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="para form-group">
+								<p>The Master Mind Series - Software Engineering program builds a strong found in ICT, software engineering principles, enterprise development frameworks, project management and much more. This course focuses on developing skilld in .NET and J2EE Technologies.</p>
+								<a href="{{ url('courses/s/mms-software-engineering') }}" class="m-btn">Learn More</a>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+
+				<div class="col-md-12 cc-2">
+					<div class="box">
+						<form class="form-inline">
+							<div class="form-group">
+								<a href="{{ url('courses/i/mms-infrastructure-management') }}"><img src="{{ asset('assets/images/course-img/thumbnails/certificate-in-network-support-and-maintenance.jpg') }}" alt="" /></a>
+							</div>
+							
+							<div class="form-group">
+								<div class="g-box">
+									<div class="info">
+										<a href="{{ url('courses/i/mms-infrastructure-management') }}"><h3>MMS - INFRASTRUCTURE MANAGEMENT</h3></a>
+										<div class="stars">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<br>
+											<span class="learners"> Master Mind Series </span>
+										</div>
+										<div class="date">
+											<i class="fa fa-clock-o"></i> 2 years
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="para form-group">
+								<p>The Master Mind Series - Infrastructure Management program builds a strong networking fundamnetals, enterprise network solutions management concepts and security solutions management and much more. NIIT provides an opprtunity to pursue specialization in Linux or Microsoft platform.</p>
+								<a href="{{ url('courses/i/mms-infrastructure-management') }}" class="m-btn">Learn More</a>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+
 				@forelse( $courses as $course )
 					<div class="cc card_flex_display">
 						<div class="box">
@@ -114,7 +186,7 @@
 					<div class="event">
 						<div class="media">
 						  	<div class="media-body">
-								<h4 class="media-heading">{{ $event->event_title }}</h4>
+								<a href="{{ url('events/' . $event->slug) }}"><h4 class="media-heading">{{ $event->event_title }}</h4></a>
 								<div class="e-tags">
 									<span class="day-tag">{{ $event->event_start_date->format('l, jS F, Y') }}</span>
 									@if($event->event_time != '')
@@ -143,45 +215,3 @@
 	@include('pages.templates.partials._alumni')
 
 @endsection
-
-{{-- @section('scripts')
-<script defer src="/assets/plugins/flexslider/js/jquery.flexslider.js"></script>
-<script type="text/javascript">
-	$(window).load(function(){
-	  $('.flexslider').flexslider({
-		animation: "slide",
-		start: function(slider){
-		  $('body').removeClass('loading');
-		}
-	  });
-	});
-</script>
-<script src="/assets/plugins/owl-carousel/js/owl.carousel.js"></script>
-<script>
-	$(document).ready(function() {
-		$("#owl-demo").owlCarousel({
-			items : 1,
-			lazyLoad : true,
-			autoPlay : true,
-			navigation : false,
-			navigationText :  false,
-			pagination : true,
-		});
-	});
-</script>
-<script type="text/javascript">
-	$('.scroll_down').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-	        var target = $(this.hash);
-	        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	           if (target.length) {
-	             $('html,body').animate({
-	                 scrollTop: target.offset().top
-	            }, 1000);
-	            return false;
-	        }
-	    }
-	});
-</script>
-
-@endsection --}}

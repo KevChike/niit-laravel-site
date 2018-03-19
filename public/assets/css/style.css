@@ -48,7 +48,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	 font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 a{
@@ -456,12 +456,12 @@ ul{
 }
 
 .rev_slider .r-p-txt {
-	font-size:13px;
+	font-size:16px;
 	color:#fff;
 	line-height:24px;
 	background:#2c394a;
-	padding-top:3px;
-	padding-bottom:3px;
+	padding-top:10px;
+	padding-bottom:10px;
 }
 
 
@@ -1929,6 +1929,10 @@ ul{
 	transition:.3s;
 }
 
+.about-author .consent_form {
+	padding: 30px 30px 0;
+}
+
 .course-single .nav-tabs > li.active > a, .course-single .nav-tabs > li.active > a:hover, .course-single .nav-tabs > li.active > a:focus {
 	color:#fff;
 	font-size:14px;
@@ -1967,9 +1971,19 @@ ul{
 	color: #959595;
 }
 
-.entry_profile h2 {
+.entry_profile h2{
 	font-size: 17px;
 	font-weight: 600;
+	color: #2c394a;
+}
+
+.mms_details {
+	padding-top: 0px;
+}
+
+.mms_details h2 {
+	font-size: 16px;
+	font-weight: 500;
 	color: #2c394a;
 }
 
@@ -1992,6 +2006,8 @@ ul{
 	background:#ebebeb;
 	padding-top:10px;
 	padding-bottom:10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin-bottom:10px;
 }
 
@@ -2002,7 +2018,7 @@ ul{
 .about-course .lessons-1 .left{
 	color:#7d7d7d;
 	color:13px;
-	padding-left:15px;
+	/*padding-left:15px;*/
 }
 
 .about-course .lessons-1 .middle{
@@ -5103,6 +5119,7 @@ footer hr{
 	.filter-bar .g-btn-2{display:block; margin: 0 auto;}
 	.header-4 .main-text .location { display: block;padding-top: 25px;width: 100%;}
 	.about-author{padding-left:20px;padding-right:20px;}
+	.about-author .consent_form {padding: 0; padding-top: 30px;}
 	.about-author .c-btn{width:100%;}
 	.about-course .nav-tabs > li {float:none;padding-top:10px;}
 	.blog-main .b-post{width:260px;}

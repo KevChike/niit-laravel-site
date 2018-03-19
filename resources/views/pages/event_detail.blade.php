@@ -18,6 +18,9 @@
      
     {{-- Default Theme --}}
     <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
+
+    {{-- bxSlider CSS file --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.bxslider.css') }}"  />
 @endsection
 
 @section('banner_title')

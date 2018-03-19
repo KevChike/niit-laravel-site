@@ -18,6 +18,9 @@
      
     {{-- Default Theme --}}
     <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
+
+    {{-- bxSlider CSS file --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.bxslider.css') }}"  />
 @endsection
 
 @section('banner_title')
@@ -81,13 +84,28 @@
 								<div class="r-txt">You sent a message not too long</div>
 							</div>
 						@else
-							<div id="consent_form" style="padding: 30px 30px 0; display: none;">
+							<div id="consent_form" class="consent_form" style="display: none;">
 								<div class="r-txt">Please, enter your details so that we can get back to you</div>
 								<form action="{{ url('/courses') }}" method="POST" autocomplete="off">
 									{{ csrf_field() }}
-									<input type="text" name="name" class="form-control" placeholder="Enter Your Full Name" maxlength="100">
-									<input type="text" name="phone" class="form-control" placeholder="Enter Your Phone Number" maxlength="14">
-									<input type="email" name="email" class="form-control" placeholder="Enter Your Email" maxlength="100">
+									<div class="form-group">
+										<input type="text" name="name" class="form-control" placeholder="Enter Your Full Name" maxlength="100" required>
+										@if ($errors->has('name'))
+											<span class="text-danger">{{ $errors->first('name') }}</span>
+										@endif
+									</div>
+									<div class="form-group">
+										<input type="text" name="phone" class="form-control" placeholder="Enter Your Phone Number" maxlength="14" required>
+										@if ($errors->has('phone'))
+											<span class="text-danger">{{ $errors->first('phone') }}</span>
+										@endif
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" class="form-control" placeholder="Enter Your Email" maxlength="100" required>
+										@if ($errors->has('email'))
+											<span class="text-danger">{{ $errors->first('email') }}</span>
+										@endif
+									</div>
 									<input type="hidden" name="course" value="{{ $course->course_title }}">
 									<button class="l-btn btn" style="border-radius: 0;">Am interested</button>
 								</form>

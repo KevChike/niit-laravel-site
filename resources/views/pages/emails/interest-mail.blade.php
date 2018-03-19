@@ -78,7 +78,7 @@
                                                                                                             <p style="margin:0 0 10px 0;font-size:14px;line-height:20px">
                                                                                                             This message was sent from {{ config('app.name') }} course page.</p>
                                                                                                             <div style="margin-top:40px;margin-bottom:20px;height:1px;background:#e5e5e5"></div>
-                                                                                                            <p style="margin:0 0 10px 0;font-size:15px;font-weight:bold;line-height:20px">
+                                                                                                            <p style="margin:0 0 10px 0;font-size:15px;line-height:20px">
                                                                                                                  Hello {{ config('app.name') }}, <br><br>
                                                                                                                 My name is  <strong>{{ $sender_name }}</strong>. I am interested in this course: <strong>{{ $interested_course }}.</strong> <br>
 

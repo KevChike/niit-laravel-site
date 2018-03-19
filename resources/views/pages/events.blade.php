@@ -18,6 +18,9 @@
      
     {{-- Default Theme --}}
     <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css') }}">
+
+    {{-- bxSlider CSS file --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.bxslider.css') }}"  />
 @endsection
 
 @section('banner_title')
@@ -33,7 +36,7 @@
 					<div class="event">
 						<div class="media">
 						  	<div class="media-body">
-								<h4 class="media-heading">{{ $event->event_title }}</h4>
+								<a href="{{ url('events/' . $event->slug) }}"><h4 class="media-heading">{{ $event->event_title }}</h4></a>
 								<div class="e-tags">
 									<span class="day-tag">{{ $event->event_start_date->format('l, jS F, Y') }}</span>
 									@if($event->event_time != '')
