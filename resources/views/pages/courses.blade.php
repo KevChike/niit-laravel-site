@@ -62,7 +62,7 @@
 							</div>
 							
 							<div class="para form-group">
-								<p>The Master Mind Series - Software Engineering program builds a strong found in ICT, software engineering principles, enterprise development frameworks, project management and much more. This course focuses on developing skilld in .NET and J2EE Technologies.</p>
+								<p>The Master Mind Series - Software Engineering program builds a strong found in ICT, software engineering principles, enterprise development frameworks, project management and much more. This course focuses on developing skills in .NET and J2EE Technologies.</p>
 								<a href="{{ url('courses/s/mms-software-engineering') }}" class="m-btn">Learn More</a>
 							</div>
 							
@@ -105,7 +105,7 @@
 						</form>
 					</div>
 				</div>
-				
+
 				@forelse( $courses as $course )
 
 					<div class="cc card_flex_display">

@@ -24,6 +24,17 @@
 				<div class="col-md-7">
 					<h3>Get in touch with us</h3>
 					<form action="{{ url('/contact') }}" method="POST" autocomplete="off" id="details-form">
+
+						{{-- Notification starts here --}}
+						@if ( session()->has('success_msg') )
+						<div class="form-group">
+							<div class="alert alert-success alert-dismissible fade in mb-2" role="alert">
+								<span id="s_msg">{{ session()->get('success_msg') }}</span>
+							</div>
+						</div>
+						@endif
+						{{-- Notification ends here --}}
+
 						{{ csrf_field() }}
 
 						<div class="form-group @if($errors->has('name')) has-error @endif">

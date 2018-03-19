@@ -5,7 +5,7 @@
 @endsection
 
 @section('page_description')
-<meta name="description" content="The Master Mind Series - Software Engineering program builds a strong found in ICT, software engineering principles, enterprise development frameworks, project management and much more. This course focuses on developing skilld in .NET and J2EE Technologies.">
+<meta name="description" content="The Master Mind Series - Software Engineering program builds a strong found in ICT, software engineering principles, enterprise development frameworks, project management and much more. This course focuses on developing skills in .NET and J2EE Technologies.">
 @endsection
 
 @section('keywords')
@@ -121,7 +121,7 @@
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="t1">
 							<p>
-								The Master Mind Series - Software Engineering program builds a strong found in ICT, software engineering principles, enterprise development frameworks, project management and much more. This course focuses on developing skilld in .NET and J2EE Technologies.
+								The Master Mind Series - Software Engineering program builds a strong found in ICT, software engineering principles, enterprise development frameworks, project management and much more. This course focuses on developing skills in .NET and J2EE Technologies.
 							</p>
 
 							<div class="row">
