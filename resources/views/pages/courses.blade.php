@@ -38,7 +38,7 @@
 					<div class="box">
 						<form class="form-inline">
 							<div class="form-group">
-								<a href="{{ url('courses/s/mms-software-engineering') }}"><img src="{{ asset('assets/images/course-img/thumbnails/certificate-in-network-support-and-maintenance.jpg') }}" alt="" /></a>
+								<a href="{{ url('courses/s/mms-software-engineering') }}"><img src="{{ asset('assets/images/course-img/thumbnails/mms-software-engineering.jpg') }}" alt="" /></a>
 							</div>
 							
 							<div class="form-group">
@@ -52,7 +52,7 @@
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<br>
-											<span class="learners"> Master Mind Series </span>
+											<span class="learners"> Professional Diploma </span>
 										</div>
 										<div class="date">
 											<i class="fa fa-clock-o"></i> 2 years
@@ -74,7 +74,7 @@
 					<div class="box">
 						<form class="form-inline">
 							<div class="form-group">
-								<a href="{{ url('courses/i/mms-infrastructure-management') }}"><img src="{{ asset('assets/images/course-img/thumbnails/certificate-in-network-support-and-maintenance.jpg') }}" alt="" /></a>
+								<a href="{{ url('courses/i/mms-infrastructure-management') }}"><img src="{{ asset('assets/images/course-img/thumbnails/mms-infrastructure-management.jpg') }}" alt="" /></a>
 							</div>
 							
 							<div class="form-group">
@@ -88,7 +88,7 @@
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<br>
-											<span class="learners"> Master Mind Series </span>
+											<span class="learners"> Professional Diploma </span>
 										</div>
 										<div class="date">
 											<i class="fa fa-clock-o"></i> 2 years

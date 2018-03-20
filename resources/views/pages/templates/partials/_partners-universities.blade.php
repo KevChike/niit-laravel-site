@@ -9,35 +9,13 @@
 			<div class="col-md-8 right">
 				
 				<ul class="bxslider2">
-					<li>
-						<img src="{{ asset('assets/images/awards/1.png') }}" alt="" />
-						<h4>Best Online LMS</h4>
-					</li>
-					
-					<li>
-						<img src="{{ asset('assets/images/awards/2.png') }}" alt="" />
-						<h4>Top Course Provider</h4>
-					</li>
-					
-					<li>
-						<img src="{{ asset('assets/images/awards/3.png') }}" alt="" />
-						<h4>No. 1 In 2015</h4>
-					</li>
-					
-					<li>
-						<img src="{{ asset('assets/images/awards/1.png') }}" alt="" />
-						<h4>Best Online LMS</h4>
-					</li>
-					
-					<li>
-						<img src="{{ asset('assets/images/awards/2.png') }}" alt="" />
-						<h4>Top Course Provider</h4>
-					</li>
-					
-					<li>
-						<img src="{{ asset('assets/images/awards/3.png') }}" alt="" />
-						<h4>No. 1 In 2015</h4>
-					</li>
+					<li><img src="{{ asset('assets/images/partners/vue.png') }}" alt="" /></li>
+					<li><img src="{{ asset('assets/images/partners/microsoft.png') }}" alt="" /></li>
+					<li><img src="{{ asset('assets/images/partners/ibm.png') }}" alt="" /></li>
+					<li><img src="{{ asset('assets/images/partners/cisco.png') }}" alt="" /></li>
+					<li><img src="{{ asset('assets/images/partners/comptia.png') }}" alt="" /></li>
+					<li><img src="{{ asset('assets/images/partners/oracle.png') }}" alt="" /></li>
+					<li><img src="{{ asset('assets/images/partners/java.png') }}" alt="" /></li>
 				</ul>
 				
 			</div>

@@ -39,7 +39,7 @@
 					<div class="box">
 						<form class="form-inline">
 							<div class="form-group">
-								<img src="{{ asset('assets/images/course-img/thumbnails/certificate-in-network-support-and-maintenance.jpg') }}" alt="" />
+								<img src="{{ asset('assets/images/course-img/thumbnails/mms-infrastructure-management.jpg') }}" alt="" />
 							</div>
 							<div class="form-group">
 								<div class="g-box">
@@ -53,7 +53,7 @@
 											<i class="fa fa-star"></i>
 										</div>
 										<div class="date">
-											Master Mind Series
+											Professional Diploma
 										</div>
 									</div>
 								</div>
