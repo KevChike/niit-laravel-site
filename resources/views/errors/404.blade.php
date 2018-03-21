@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Error 404</title>
+        <title>Page not found</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet" type="text/css">
-        <link href="/assets/plugins/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
         <style>
             html, body {
                 height: 100%;
@@ -16,6 +15,20 @@
                 color: #1F8CDF;
                 display: table;
                 font-family: 'Lato';
+            }
+
+            .row {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .row:before, .row:after {
+              display: table;
+              content: " ";
+            }
+
+            .row:after {
+                clear: both;
             }
 
             .container {
@@ -41,9 +54,9 @@
                 font-weight: 400;
                 font-size: 1.1em;
                 background-color: #1F8CDF;
+                text-decoration: none;
                 color: #fff;
                 padding: 7px 10px;
-                border-radius: 8px;
                 display: inline-block;
                 border: 2px solid transparent;
             }
@@ -67,12 +80,7 @@
                 <div class="sub-title">Page not found</div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <img src="/assets/img/404.png" class="img-responsives">
-                </div>
-                <div class="col-md-3">
-                    
-                </div>
+                <img src="/assets/images/404.png" class="img-responsives">
             </div>
             <div class="row">
                 <div class="bottom-title">

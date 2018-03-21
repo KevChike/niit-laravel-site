@@ -143,9 +143,11 @@
 	                </div>
 				@endforelse
 				
-				<div class="col-md-12 pagi" style="margin: 30px 0;">
-					<a href="{{ url('courses') }}" class="btn-n btn-ex">VIEW ALL</a>
-				</div>
+				@if(count($courses) > 0)
+					<div class="col-md-12 pagi" style="margin: 30px 0;">
+						<a href="{{ url('courses') }}" class="btn-n btn-ex">VIEW ALL</a>
+					</div>
+				@endif
 			</div>
 		</div>
 	</div>
@@ -206,9 +208,11 @@
 	                </div>
 				@endforelse
 			</div>
-			<div class="col-md-12 pagi">
-				<a href="{{ url('events') }}" class="btn-n btn-ex">VIEW ALL</a>
-			</div>
+			@if(count($events) > 0)
+				<div class="col-md-12 pagi">
+					<a href="{{ url('events') }}" class="btn-n btn-ex">VIEW ALL</a>
+				</div>
+			@endif
 		</div>
 	</div>
 
