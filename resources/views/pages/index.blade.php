@@ -5,7 +5,7 @@
 @endsection
 
 @section('page_description')
-	<meta name="description" content="NIIT is a blobal leader in skills and talent development and has established presence in Nigeria. {{ config('app.name') }} offers various programs like MMS (Software Engineering and Infrastructure Management), Oracle 12c, Server Infrastructure, CCNA, A+, N+, S+, web design and development, Graphic design, MIS and many more.">
+	<meta name="description" content="NIIT is a global leader in skills and talent development and has established presence in Nigeria. {{ config('app.name') }} offers various programs like MMS (Software Engineering and Infrastructure Management), Oracle 12c, Server Infrastructure, CCNA, A+, N+, S+, web design and development, Graphic design, MIS and many more.">
 @endsection
 
 @section('keywords')
